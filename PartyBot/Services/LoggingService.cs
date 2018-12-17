@@ -7,9 +7,6 @@ namespace PartyBot.Services
 {
     public class LoggingService
     {
-        public void Log(LogMessage logMessage)
-        {
 
-        }
     }
 }

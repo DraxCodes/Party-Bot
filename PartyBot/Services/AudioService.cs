@@ -26,9 +26,14 @@ namespace PartyBot.Services
         private ConcurrentDictionary<ulong, AudioOptions> Options
             => _lazyOptions.Value;
 
-        //I decided to put these two commands as one, will probably change it in future. 
-        //This is ran when a user uses either the command !Join or !Play
-        public async Task<string> JoinOrPlayAsync(SocketGuildUser user, IMessageChannel textChannel, ulong guildId, string query = null)
+        public async Task<string> JoinOrPlayAsync(SocketGuildUser user, IMessageChannel textChannel, ulong guildId)
+            => await JoinOrPlayAsync(user, textChannel, guildId);
+
+        /*This is ran when a user uses either the command !Join or !Play
+            I decided to put these two commands as one, will probably change it in future. 
+            Task Returns a string for now for use in the Command Module (ReplyAsync).
+            TODO: Return Embed to make it all pretty. */
+        public async Task<string> JoinOrPlayAsync(SocketGuildUser user, IMessageChannel textChannel, ulong guildId, string query)
         {
             //Check If User Is Connected To Voice Cahnnel.
             if (user.VoiceChannel == null)
@@ -100,7 +105,9 @@ namespace PartyBot.Services
             
         }
 
-        //Simple Leave The Channel Command.
+        /*This is ran when a user uses the command !Leave.
+            Task Returns a string for now for use in the Command Module (ReplyAsync).
+            TODO: Return Embed to make it all pretty. */
         public async Task<string> LeaveAsync(ulong guildId)
         {
             try

@@ -15,6 +15,7 @@ namespace PartyBot.Services
         private ServiceProvider _services;
         private Lavalink _lavaLink;
 
+        /* Initialize the Discord Client. */
         public async Task InitializeAsync()
         {
             _services = ConfigureServices();
@@ -31,6 +32,7 @@ namespace PartyBot.Services
             await Task.Delay(-1);
         }
 
+        /* Hook Any Events Up Here. */
         private void HookEvents()
         {
             _lavaLink.Log += LogAsync;
@@ -39,21 +41,23 @@ namespace PartyBot.Services
             _client.Ready += OnReadyAsync;
         }
 
+        /* Used when the Client Fires the ReadyEvent. */
         private async Task OnReadyAsync()
         {
-            
             var node = _lavaLink.AddNodeAsync(_client).ConfigureAwait(false);
-
             await _client.SetGameAsync(Global.Config.GameStatus);
         }
 
+        /*Used whenever we want to log something to the Console. 
+            Todo: Hook in a Custom LoggingService. */
         private Task LogAsync(LogMessage logMessage)
         {
-            Console.WriteLine(logMessage.ToString());
+            Console.WriteLine(logMessage);
 
             return Task.CompletedTask;
         }
 
+        /* Configure our Services for Dependency Injection. */
         private ServiceProvider ConfigureServices()
         {
             return new ServiceCollection()
