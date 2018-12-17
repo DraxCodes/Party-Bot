@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/67f597eaa437467daceb6afefa9d8828)](https://app.codacy.com/app/joelp53/Party-Bot?utm_source=github.com&utm_medium=referral&utm_content=joelp53/Party-Bot&utm_campaign=Badge_Grade_Dashboard)
 # PartyBot [![Build status](https://ci.appveyor.com/api/projects/status/bi3vs4lpl1c02i38?svg=true)](https://ci.appveyor.com/project/joelp53/party-bot) 
 
 ### A Simple Discord Music Bot Designed For Medium Sized Servers.
