@@ -1,6 +1,6 @@
 # PartyBot [![Build status](https://ci.appveyor.com/api/projects/status/bi3vs4lpl1c02i38?svg=true)](https://ci.appveyor.com/project/joelp53/party-bot) 
 
-### A Simple Discord Bot Designed For Medium Sized World Of Warcraft Discord Servers.
+### A Simple Discord Music Bot Designed For Medium Sized Servers.
 
 ## Built With
 
