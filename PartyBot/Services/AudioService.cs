@@ -157,7 +157,7 @@ namespace PartyBot.Services
                         var trackNum = 2;
                         foreach (var track in player.Queue.Items)
                         {
-                            descriptionBuilder.Append($"{trackNum}: [{track.Title}]({track.Uri}) - {track.Id}");
+                            descriptionBuilder.Append($"{trackNum}: [{track.Title}]({track.Uri}) - {track.Id}\n");
                             trackNum++;
                         }
                         return await EmbedHandler.CreateBasicEmbed("Music Playlist", $"Now Playing: [{player.CurrentTrack.Title}]({player.CurrentTrack.Uri})\n{descriptionBuilder.ToString()}", Color.Blue);
