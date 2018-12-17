@@ -27,10 +27,9 @@ namespace PartyBot.Services
         private ConcurrentDictionary<ulong, AudioOptions> Options
             => _lazyOptions.Value;
 
-        /*This is ran when a user uses either the command !Join or !Play
+        /*This is ran when a user uses either the command Join or Play
             I decided to put these two commands as one, will probably change it in future. 
-            Task Returns a string for now for use in the Command Module (ReplyAsync).
-            TODO: Return Embed to make it all pretty. */
+            Task Returns an Embed which is used in the command call.. */
         public async Task<Embed> JoinOrPlayAsync(SocketGuildUser user, IMessageChannel textChannel, ulong guildId, string query = null)
         {
             //Check If User Is Connected To Voice Cahnnel.
@@ -103,9 +102,8 @@ namespace PartyBot.Services
             
         }
 
-        /*This is ran when a user uses the command !Leave.
-            Task Returns a string for now for use in the Command Module (ReplyAsync).
-            TODO: Return Embed to make it all pretty. */
+        /*This is ran when a user uses the command Leave.
+            Task Returns an Embed which is used in the command call. */
         public async Task<Embed> LeaveAsync(ulong guildId)
         {
             try
@@ -129,23 +127,33 @@ namespace PartyBot.Services
             }
         }
 
+        /*This is ran when a user uses the command List 
+            Task Returns an Embed which is used in the command call. */
         public async Task<Embed> ListAsync(ulong guildId)
         {
             try
             {
+                /* Create a string builder we can use to format how we want our list to be displayed. */
                 var descriptionBuilder = new StringBuilder();
+
+                /* Get The Player and make sure it isn't null. */
                 var player = _lavalink.DefaultNode.GetPlayer(guildId);
                 if (player == null)
                     return await EmbedHandler.CreateErrorEmbed("Music, List", $"Could not aquire player.\nAre you using the bot right now? check{Global.Config.DefaultPrefix}Help for info on how to use the bot.");
 
                 if (player.IsPlaying)
                 {
+                    /*If the queue count is less than 1 and the current track IS NOT null then we wont have a list to reply with.
+                        In this situation we simply return an embed that displays the current track instead. */
                     if (player.Queue.Count < 1 && player.CurrentTrack != null)
                     {
                         return await EmbedHandler.CreateBasicEmbed($"Now Playing: {player.CurrentTrack.Title}", "Nothing Else Is Queued.", Color.Blue);
                     }
                     else
                     {
+                        /* Now we know if we have something in the queue worth replying with, so we itterate through all the Tracks in the queue.
+                         *  Next Add the Track title and the url however make use of Discords Markdown feature to display everything neatly.
+                            This trackNum variable is used to display the number in which the song is in place. (Start at 2 because we're including the current song.*/
                         var trackNum = 2;
                         foreach (var track in player.Queue.Items)
                         {
@@ -167,38 +175,48 @@ namespace PartyBot.Services
 
         }
 
+        /*This is ran when a user uses the command Skip 
+            Task Returns an Embed which is used in the command call. */
         public async Task<Embed> SkipTrackAsync(ulong guildId)
         {
             try
             {
                 var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                /* Check if the player exists */
                 if (player == null)
                     return await EmbedHandler.CreateErrorEmbed("Music, List", $"Could not aquire player.\nAre you using the bot right now? check{Global.Config.DefaultPrefix}Help for info on how to use the bot.");
+                /* Check The queue, if it is less than one (meaning we only have the current song available to skip) it wont allow the user to skip.
+                     User is expected to use the Stop command if they're only wanting to skip the current song. */
                 if (player.Queue.Count < 1)
                 {
-                    return await EmbedHandler.CreateErrorEmbed("Music, SkipTrack", "Unable To skip a track as there is only One or No songs currently playing.");
+                    return await EmbedHandler.CreateErrorEmbed("Music, SkipTrack", $"Unable To skip a track as there is only One or No songs currently playing." +
+                        $"\n\nDid you mean {Global.Config.DefaultPrefix}Stop?");
                 }
                 else
                 {
                     try
                     {
+                        /* Save the current song for use after we skip it. */
                         var currentTrack = player.CurrentTrack;
+                        /* Skip the current song. */
                         await player.SkipAsync();
-                        return await EmbedHandler.CreateBasicEmbed("Music Delist", $"I have successfully skiped {currentTrack.Title}", Color.Blue);
+                        return await EmbedHandler.CreateBasicEmbed("Music Skip", $"I have successfully skiped {currentTrack.Title}", Color.Blue);
                     }
                     catch (Exception ex)
                     {
-                        return await EmbedHandler.CreateErrorEmbed("Music, DelistTrack", ex.ToString());
+                        return await EmbedHandler.CreateErrorEmbed("Music, Skip", ex.ToString());
                     }
 
                 }
             }
             catch (Exception ex)
             {
-                return await EmbedHandler.CreateErrorEmbed("Music, DelistTrack", ex.ToString());
+                return await EmbedHandler.CreateErrorEmbed("Music, Skip", ex.ToString());
             }
         }
 
+        /*This is ran when a user uses the command Stop 
+            Task Returns an Embed which is used in the command call. */
         public async Task<Embed> StopAsync(ulong guildId)
         {
             try
@@ -206,6 +224,8 @@ namespace PartyBot.Services
                 var player = _lavalink.DefaultNode.GetPlayer(guildId);
                 if (player == null)
                     return await EmbedHandler.CreateErrorEmbed("Music, List", $"Could not aquire player.\nAre you using the bot right now? check{Global.Config.DefaultPrefix}Help for info on how to use the bot.");
+                /* Check if the player exists, if it does, check if it is playing.
+                     If it is playing, we can stop.*/
                 if (player.IsPlaying)
                     await player.StopAsync();
                 /* Not sure if this is required as I think player.StopAsync(); clears the queue anyway. */
