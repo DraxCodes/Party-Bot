@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Discord;
+using Newtonsoft.Json;
 using PartyBot.DataStructs;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace PartyBot.Handlers
             {
                 json = JsonConvert.SerializeObject(GenerateNewConfig(), Formatting.Indented);
                 File.WriteAllText("config.json", json, new UTF8Encoding(false));
-                Console.WriteLine("Config file was not found, a new one was generated. Fill it with proper values and rerun this program");
+                Console.WriteLine(new LogMessage(LogSeverity.Error, ConfigPath, "No Config File Found, Making one"));
                 Console.ReadKey();
 
                 return;
