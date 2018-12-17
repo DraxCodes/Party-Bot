@@ -4,10 +4,12 @@
 
 ## Built With
 
-* [Discord.Net](https://github.com/RogueException/Discord.Net) - The Discord Library used
-* [Victoria](https://github.com/Yucked/Victoria) - LavaLink Library.
+* [DotNet Core (V- 2.2)](https://dotnet.microsoft.com/download/dotnet-core/2.2) - Dotnet version.
+* [Discord.Net (V- 2.0.0-beta2-01039)](https://github.com/RogueException/Discord.Net) - The Discord Library used
+* [Victoria (V- 3.1.2)](https://github.com/Yucked/Victoria) - LavaLink Library.
 
 ## Want to use this as a template to build off?
+**NOTE: This Requires At-Least C# Version 7.2**
 1. First Make sure you have a fork of this repo. (Makes it easier for you to then commit your own changes to your GitHub)
 2. Next you will need to clone your forked repo onto your P.C.
 3. Once it's on your machine you will want to run the command: ``dotnet restore`` (Do this in your prefered Terminal)
