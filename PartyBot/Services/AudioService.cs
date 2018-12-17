@@ -1,6 +1,7 @@
 ﻿using Discord;
 using Discord.WebSocket;
 using PartyBot.DataStructs;
+using PartyBot.Handlers;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -26,22 +27,19 @@ namespace PartyBot.Services
         private ConcurrentDictionary<ulong, AudioOptions> Options
             => _lazyOptions.Value;
 
-        public async Task<string> JoinOrPlayAsync(SocketGuildUser user, IMessageChannel textChannel, ulong guildId)
-            => await JoinOrPlayAsync(user, textChannel, guildId);
-
         /*This is ran when a user uses either the command !Join or !Play
             I decided to put these two commands as one, will probably change it in future. 
             Task Returns a string for now for use in the Command Module (ReplyAsync).
             TODO: Return Embed to make it all pretty. */
-        public async Task<string> JoinOrPlayAsync(SocketGuildUser user, IMessageChannel textChannel, ulong guildId, string query)
+        public async Task<Embed> JoinOrPlayAsync(SocketGuildUser user, IMessageChannel textChannel, ulong guildId, string query = null)
         {
             //Check If User Is Connected To Voice Cahnnel.
             if (user.VoiceChannel == null)
-                return "You must be connected to a voice channel.";
+                return await EmbedHandler.CreateErrorEmbed("Music, Join/Play", "You Must First Join a Voice Channel.");
 
             //Check if user who used !Join is a user that has already summoned the Bot.
             if (Options.TryGetValue(user.Guild.Id, out var options) && options.Summoner.Id != user.Id)
-                return $"I can't join another voice channel till {options.Summoner} disconnects me.";
+                return await EmbedHandler.CreateErrorEmbed("Music, Join/Play", $"I can't join another voice channel untill {options.Summoner} disconnects me.");
 
             //If The user hasn't provided a Search string from the !Play command, then they must have used the !Join command.
             //Join the voice channel the user is in.
@@ -52,7 +50,7 @@ namespace PartyBot.Services
                 {
                     Summoner = user
                 });
-                return $"Now connected to {user.VoiceChannel.Name} and bound to {textChannel.Name}. Get Ready For Betrays...";
+                return await EmbedHandler.CreateBasicEmbed("Music", $"Now connected to {user.VoiceChannel.Name} and bound to {textChannel.Name}. Get Ready For Betrays...", Color.Blue);
             }
             else
             {
@@ -79,7 +77,7 @@ namespace PartyBot.Services
 
                     //If we couldn't find anything, tell the user.
                     if (search.LoadResultType == LoadResultType.NoMatches)
-                        return $"BAMBOOZLED! I wasn't able to find anything for {query}.";
+                        return await EmbedHandler.CreateErrorEmbed("Music", $"BAMBOOZLED! I wasn't able to find anything for {query}.");
 
                     //Get the first track from the search results.
                     //TODO: Add a 1-5 list for the user to pick from. (Like Fredboat)
@@ -89,17 +87,17 @@ namespace PartyBot.Services
                     if(player.IsPlaying || player.IsPaused)
                     {
                         player.Queue.Enqueue(track);
-                        return $"{track.Title} has been added to queue.";
+                        return await EmbedHandler.CreateBasicEmbed("Music", $"{track.Title} has been added to queue.", Color.Blue);
                     }
 
                     //Player was not playing anything, so lets play the requested track.
                     await player.PlayAsync(track);
-                    return $"Now Playing: {track.Title} - {track.Uri}";
+                    return await EmbedHandler.CreateBasicEmbed("Music", $"Now Playing: {track.Title}\nUrl: {track.Uri}", Color.Blue);
                 }
                 //If after all the checks we did, something still goes wrong. Tell the user about it so they can report it back to us.
                 catch (Exception ex)
                 {
-                    return ex.ToString();
+                    return await EmbedHandler.CreateErrorEmbed("Music, Join/Play", ex.ToString());
                 }
             }
             
@@ -108,7 +106,7 @@ namespace PartyBot.Services
         /*This is ran when a user uses the command !Leave.
             Task Returns a string for now for use in the Command Module (ReplyAsync).
             TODO: Return Embed to make it all pretty. */
-        public async Task<string> LeaveAsync(ulong guildId)
+        public async Task<Embed> LeaveAsync(ulong guildId)
         {
             try
             {
@@ -122,12 +120,103 @@ namespace PartyBot.Services
                 //Leave the voice channel.
                 var name = player.VoiceChannel.Name;
                 await _lavalink.DefaultNode.DisconnectAsync(guildId);
-                return $"I've left {name}. Thank you for playing moosik.";
+                return await EmbedHandler.CreateBasicEmbed("Music", $"I've left {name}. Thank you for playing moosik.", Color.Blue);
             }
             //Tell the user about the error so they can report it back to us.
             catch (InvalidOperationException ex)
             {
-                return ex.Message;
+                return await EmbedHandler.CreateErrorEmbed("Music, Leave", ex.ToString());
+            }
+        }
+
+        public async Task<Embed> ListAsync(ulong guildId)
+        {
+            try
+            {
+                var descriptionBuilder = new StringBuilder();
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                if (player == null)
+                    return await EmbedHandler.CreateErrorEmbed("Music, List", $"Could not aquire player.\nAre you using the bot right now? check{Global.Config.DefaultPrefix}Help for info on how to use the bot.");
+
+                if (player.IsPlaying)
+                {
+                    if (player.Queue.Count < 1 && player.CurrentTrack != null)
+                    {
+                        return await EmbedHandler.CreateBasicEmbed($"Now Playing: {player.CurrentTrack.Title}", "Nothing Else Is Queued.", Color.Blue);
+                    }
+                    else
+                    {
+                        var trackNum = 2;
+                        foreach (var track in player.Queue.Items)
+                        {
+                            descriptionBuilder.Append($"{trackNum}: [{track.Title}]({track.Uri}) - {track.Id}");
+                            trackNum++;
+                        }
+                        return await EmbedHandler.CreateBasicEmbed("Music Playlist", $"Now Playing: [{player.CurrentTrack.Title}]({player.CurrentTrack.Uri})\n{descriptionBuilder.ToString()}", Color.Blue);
+                    }
+                }
+                else
+                {
+                    return await EmbedHandler.CreateErrorEmbed("Music, List", "Player doesn't seem to be playing anything right now. If this is an error, Please Contact Draxis.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return await EmbedHandler.CreateErrorEmbed("Music, List", ex.Message);
+            }
+
+        }
+
+        public async Task<Embed> SkipTrackAsync(ulong guildId)
+        {
+            try
+            {
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                if (player == null)
+                    return await EmbedHandler.CreateErrorEmbed("Music, List", $"Could not aquire player.\nAre you using the bot right now? check{Global.Config.DefaultPrefix}Help for info on how to use the bot.");
+                if (player.Queue.Count < 1)
+                {
+                    return await EmbedHandler.CreateErrorEmbed("Music, SkipTrack", "Unable To skip a track as there is only One or No songs currently playing.");
+                }
+                else
+                {
+                    try
+                    {
+                        var currentTrack = player.CurrentTrack;
+                        await player.SkipAsync();
+                        return await EmbedHandler.CreateBasicEmbed("Music Delist", $"I have successfully skiped {currentTrack.Title}", Color.Blue);
+                    }
+                    catch (Exception ex)
+                    {
+                        return await EmbedHandler.CreateErrorEmbed("Music, DelistTrack", ex.ToString());
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return await EmbedHandler.CreateErrorEmbed("Music, DelistTrack", ex.ToString());
+            }
+        }
+
+        public async Task<Embed> StopAsync(ulong guildId)
+        {
+            try
+            {
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                if (player == null)
+                    return await EmbedHandler.CreateErrorEmbed("Music, List", $"Could not aquire player.\nAre you using the bot right now? check{Global.Config.DefaultPrefix}Help for info on how to use the bot.");
+                if (player.IsPlaying)
+                    await player.StopAsync();
+                /* Not sure if this is required as I think player.StopAsync(); clears the queue anyway. */
+                foreach (var track in player.Queue.Items)
+                    player.Queue.Dequeue();
+
+                return await EmbedHandler.CreateBasicEmbed("Music Stop", "I Have stopped playback & the playlist has been cleared.", Color.Blue);
+            }
+            catch (Exception ex)
+            {
+                return await EmbedHandler.CreateErrorEmbed("Music, Stop", ex.ToString());
             }
         }
     }
