@@ -15,7 +15,6 @@ namespace PartyBot.Services
 {
     public sealed class AudioService
     {
-        private LavaNode _node;
         private Lavalink _lavalink;
 
         public AudioService(Lavalink lavalink)

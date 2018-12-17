@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PartyBot.DataStructs;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -17,7 +18,7 @@ namespace PartyBot.Handlers
             var json = string.Empty;
             if (!File.Exists(ConfigPath))
             {
-                json = JsonConvert.SerializeObject(Config);
+                json = JsonConvert.SerializeObject(GenerateNewConfig(), Formatting.Indented);
                 File.WriteAllText("config.json", json, new UTF8Encoding(false));
                 Console.WriteLine("Config file was not found, a new one was generated. Fill it with proper values and rerun this program");
                 Console.ReadKey();
@@ -27,5 +28,13 @@ namespace PartyBot.Handlers
             json = File.ReadAllText(ConfigPath, new UTF8Encoding(false));
             Config = JsonConvert.DeserializeObject<BotConfig>(json);
         }
+
+        private static BotConfig GenerateNewConfig() => new BotConfig
+        {
+            DiscordToken = "",
+            DefaultPrefix = "!",
+            GameStatus = "CHANGE ME IN CONFIG",
+            BlacklistedChannels = new List<ulong>()
+        };
     }
 }
