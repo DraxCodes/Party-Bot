@@ -1,16 +1,18 @@
 ﻿using Discord.Commands;
 using Discord.WebSocket;
 using PartyBot.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PartyBot.Modules
 {
     public class AudioModule : ModuleBase<SocketCommandContext>
     {
+        /* Get our AudioService from DI */
         public AudioService AudioService { get; set; }
+
+        /* All the below commands are ran via Lambda Expressions to keep this file as neat and closed off as possible. 
+              We pass the AudioService Task into the section that would normally require an Embed as that's what all the
+              AudioService Tasks are returning. */
 
         [Command("Join")]
         public async Task JoinAndPlay()

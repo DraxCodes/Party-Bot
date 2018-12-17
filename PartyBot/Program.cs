@@ -6,8 +6,7 @@ namespace PartyBot
 {
     class Program
     {
-        private readonly Assembly _assembly = Assembly.GetExecutingAssembly();
-
+        /* Keep This File Super Simple. (This Method Requires C# 7.2 or Higher!) */
         private static Task Main(string[] args)
             => new DiscordService().InitializeAsync();
     }

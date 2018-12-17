@@ -7,6 +7,6 @@ namespace PartyBot.Services
 {
     public class LoggingService
     {
-
+        /* TODO: IMPLEMENT THIS. */
     }
 }
