@@ -21,7 +21,7 @@ namespace PartyBot.Services
             _services = ConfigureServices();
             _client = _services.GetRequiredService<DiscordSocketClient>();
             _lavaLink = _services.GetRequiredService<Lavalink>();
-            Global.Initialize();
+            var global = new Global().Initialize();
             HookEvents();
 
             await _client.LoginAsync(TokenType.Bot, Global.Config.DiscordToken);
@@ -32,7 +32,7 @@ namespace PartyBot.Services
             await Task.Delay(-1);
         }
 
-        /* Hook Any Events Up Here. */
+        /* Hook Any Client Events Up Here. */
         private void HookEvents()
         {
             _lavaLink.Log += LogAsync;
@@ -50,11 +50,9 @@ namespace PartyBot.Services
 
         /*Used whenever we want to log something to the Console. 
             Todo: Hook in a Custom LoggingService. */
-        private Task LogAsync(LogMessage logMessage)
+        private async Task LogAsync(LogMessage logMessage)
         {
-            Console.WriteLine(logMessage);
-
-            return Task.CompletedTask;
+            await LoggingService.LogAsync(logMessage.Source, logMessage.Severity, logMessage.Message);
         }
 
         /* Configure our Services for Dependency Injection. */

@@ -1,23 +1,24 @@
 ﻿using Discord;
 using Newtonsoft.Json;
 using PartyBot.DataStructs;
+using PartyBot.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace PartyBot.Handlers
 {
-    public static class Global
+    public class Global
     {
         public static string ConfigPath { get; set; } = "config.json";
         public static BotConfig Config { get; set; }
-        public static ulong ReactionMessageID { get; set; }
 
         //Initialize the Config and Global Properties.
         //TODO (Check token validity before but starts,
         //right now if the config file is generated but the user hasn't filled it out it will throw a null exception error.
-        public static void Initialize()
+        public async Task Initialize()
         {
             var json = string.Empty;
 
@@ -26,10 +27,8 @@ namespace PartyBot.Handlers
             {
                 json = JsonConvert.SerializeObject(GenerateNewConfig(), Formatting.Indented);
                 File.WriteAllText("config.json", json, new UTF8Encoding(false));
-                Console.WriteLine(new LogMessage(LogSeverity.Error, ConfigPath, "No Config File Found, Making one"));
-                Console.ReadKey();
-
-                return;
+                await LoggingService.LogAsync("Bot", LogSeverity.Error, "No Config file found. A new one has been generated. Please close the & fill in the required section.");
+                await Task.Delay(-1);
             }
 
             //If Config.json exists, get the values and apply them to the Global Property (Config).
