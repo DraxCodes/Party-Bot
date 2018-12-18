@@ -4,7 +4,7 @@
 
 ## Built With
 
-* [DotNet Core (Version - 2.2)](https://dotnet.microsoft.com/download/dotnet-core/2.2) - Dotnet version.
+* [DotNet Core (Version - 2.1)](https://dotnet.microsoft.com/download/dotnet-core/2.2) - Dotnet version.
 * [Discord.Net (Version - 2.0.0-beta2-01039)](https://github.com/RogueException/Discord.Net) - The Discord Library used
 * [Victoria (Version - 3.1.2)](https://github.com/Yucked/Victoria) - LavaLink Library.
 
