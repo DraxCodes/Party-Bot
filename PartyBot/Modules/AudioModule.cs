@@ -47,7 +47,7 @@ namespace PartyBot.Modules
             => await ReplyAsync(await AudioService.Pause(Context.Guild.Id));
 
         [Command("Resume")]
-        public async Task resume()
+        public async Task Resume()
             => await ReplyAsync(await AudioService.Pause(Context.Guild.Id));
     }
 }

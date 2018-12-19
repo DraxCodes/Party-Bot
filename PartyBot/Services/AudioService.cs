@@ -83,7 +83,7 @@ namespace PartyBot.Services
                     track = search.Tracks.FirstOrDefault();
 
                     //If the Bot is already playing music, or if it is paused but still has music in the playlist, Add the requested track to the queue.
-                    if(player.IsPlaying || player.IsPaused)
+                    if(player.CurrentTrack != null && player.IsPlaying || player.IsPaused)
                     {
                         player.Queue.Enqueue(track);
                         return await EmbedHandler.CreateBasicEmbed("Music", $"{track.Title} has been added to queue.", Color.Blue);
@@ -297,6 +297,7 @@ namespace PartyBot.Services
             if (reason is TrackReason.LoadFailed || reason is TrackReason.Cleanup)
                 return;
             player.Queue.TryDequeue(out LavaTrack nextTrack);
+
             if (nextTrack is null)
             {
                 await player.StopAsync();

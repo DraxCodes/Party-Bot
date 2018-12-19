@@ -14,7 +14,7 @@ namespace PartyBot.Services
         private DiscordSocketClient _client;
         private ServiceProvider _services;
         private Lavalink _lavaLink;
-        private AudioService _audioService;
+        private AudioService _audio;
 
         /* Initialize the Discord Client. */
         public async Task InitializeAsync()
@@ -22,7 +22,7 @@ namespace PartyBot.Services
             _services = ConfigureServices();
             _client = _services.GetRequiredService<DiscordSocketClient>();
             _lavaLink = _services.GetRequiredService<Lavalink>();
-            _audioService = _services.GetRequiredService<AudioService>();
+            _audio = _services.GetService<AudioService>();
             var global = new Global().Initialize();
             HookEvents();
 
@@ -49,7 +49,7 @@ namespace PartyBot.Services
             var node = await _lavaLink.AddNodeAsync(_client).ConfigureAwait(false);
             await _client.SetGameAsync(Global.Config.GameStatus);
 
-            node.TrackFinished += _audioService.OnFinshed;
+            node.TrackFinished += _audio.OnFinshed;
         }
 
         /*Used whenever we want to log something to the Console. 
