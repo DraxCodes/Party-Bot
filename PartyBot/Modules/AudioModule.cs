@@ -37,5 +37,17 @@ namespace PartyBot.Modules
         [Command("Skip")]
         public async Task Delist(string id = null)
             => await ReplyAsync("", false, await AudioService.SkipTrackAsync(Context.Guild.Id));
+
+        [Command("Volume")]
+        public async Task Volume(int volume)
+            => await ReplyAsync(await AudioService.VolumeAsync(Context.Guild.Id, volume));
+
+        [Command("Pause")]
+        public async Task Pause()
+            => await ReplyAsync(await AudioService.Pause(Context.Guild.Id));
+
+        [Command("Resume")]
+        public async Task resume()
+            => await ReplyAsync(await AudioService.Pause(Context.Guild.Id));
     }
 }

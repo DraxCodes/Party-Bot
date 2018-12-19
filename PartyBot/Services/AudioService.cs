@@ -239,5 +239,57 @@ namespace PartyBot.Services
                 return await EmbedHandler.CreateErrorEmbed("Music, Stop", ex.ToString());
             }
         }
+
+        /*This is ran when a user uses the command Volume 
+            Task Returns a String which is used in the command call. */
+        public async Task<string> VolumeAsync(ulong guildId, int volume)
+        {
+            if (volume >= 150 || volume <= 0)
+            {
+                return $"Volume must be between 0 and 150.";
+            }
+            try
+            {
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                await player.SetVolumeAsync(volume);
+                return $"Volume has been set to {volume}.";
+            }
+            catch (InvalidOperationException ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public async Task<string> Pause(ulong guildId)
+        {
+            try
+            {
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                if (player.IsPaused)
+                    return "player is already paused.";
+
+                await player.PauseAsync();
+                return $"**Paused:** {player.CurrentTrack.Title}, what a bamboozle.";
+            }
+            catch (InvalidOperationException ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public async Task<string> Resume(ulong guildId)
+        {
+            try
+            {
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                if (!player.IsPaused)
+                    await player.PauseAsync();
+                return $"**Resumed:** {player.CurrentTrack.Title}";
+            }
+            catch (InvalidOperationException ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }
