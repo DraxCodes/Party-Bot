@@ -291,5 +291,21 @@ namespace PartyBot.Services
                 return ex.Message;
             }
         }
+
+        public async Task OnFinshed(LavaPlayer player, LavaTrack track, TrackReason reason)
+        {
+            if (reason is TrackReason.LoadFailed || reason is TrackReason.Cleanup)
+                return;
+            player.Queue.TryDequeue(out LavaTrack nextTrack);
+            if (nextTrack is null)
+            {
+                await player.StopAsync();
+            }
+            else
+            {
+                await player.PlayAsync(nextTrack);
+                await player.TextChannel.SendMessageAsync("", false, await EmbedHandler.CreateBasicEmbed("Now Playing", $"[{nextTrack.Title}]({nextTrack.Uri})", Color.Blue));
+            }
+        }
     }
 }
