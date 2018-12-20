@@ -266,7 +266,10 @@ namespace PartyBot.Services
             {
                 var player = _lavalink.DefaultNode.GetPlayer(guildId);
                 if (player.IsPaused)
-                    return "player is already paused.";
+                {
+                    await player.PauseAsync();
+                    return $"**Resumed:** Now Playing {player.CurrentTrack.Title}";
+                }
 
                 await player.PauseAsync();
                 return $"**Paused:** {player.CurrentTrack.Title}, what a bamboozle.";
