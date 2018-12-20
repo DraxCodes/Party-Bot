@@ -46,10 +46,19 @@ namespace PartyBot.Services
         /* Used when the Client Fires the ReadyEvent. */
         private async Task OnReadyAsync()
         {
-            var node = await _lavaLink.AddNodeAsync(_client).ConfigureAwait(false);
-            await _client.SetGameAsync(Global.Config.GameStatus);
+            try
+            {
+                var node = await _lavaLink.AddNodeAsync(_client, new Configuration {
+                    Severity = LogSeverity.Info
+                });
+                node.TrackFinished += _audio.OnFinshed;
+                await _client.SetGameAsync(Global.Config.GameStatus);
+            }
+            catch (Exception ex)
+            {
+                await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+            }
 
-            node.TrackFinished += _audio.OnFinshed;
         }
 
         /*Used whenever we want to log something to the Console. 

@@ -37,8 +37,8 @@ namespace PartyBot.Services
                 return await EmbedHandler.CreateErrorEmbed("Music, Join/Play", "You Must First Join a Voice Channel.");
 
             //Check if user who used !Join is a user that has already summoned the Bot.
-            if (Options.TryGetValue(user.Guild.Id, out var options) && options.Summoner.Id != user.Id)
-                return await EmbedHandler.CreateErrorEmbed("Music, Join/Play", $"I can't join another voice channel untill {options.Summoner} disconnects me.");
+            /*if (Options.TryGetValue(user.Guild.Id, out var options) && options.Summoner.Id != user.Id)
+                return await EmbedHandler.CreateErrorEmbed("Music, Join/Play", $"I can't join another voice channel untill {options.Summoner} disconnects me.");*/
 
             //If The user hasn't provided a Search string from the !Play command, then they must have used the !Join command.
             //Join the voice channel the user is in.

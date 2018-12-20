@@ -3,3 +3,4 @@
 PartyBot/obj/*
 PartyBot/bin/*
 *.json
+/PartyBot/LavaLink/*
