@@ -14,7 +14,6 @@ namespace PartyBot.Services
         private DiscordSocketClient _client;
         private ServiceProvider _services;
         private Lavalink _lavaLink;
-        private AudioService _audio;
 
         /* Initialize the Discord Client. */
         public async Task InitializeAsync()
@@ -22,7 +21,6 @@ namespace PartyBot.Services
             _services = ConfigureServices();
             _client = _services.GetRequiredService<DiscordSocketClient>();
             _lavaLink = _services.GetRequiredService<Lavalink>();
-            _audio = _services.GetService<AudioService>();
             var global = new Global().Initialize();
             HookEvents();
 
@@ -51,7 +49,7 @@ namespace PartyBot.Services
                 var node = await _lavaLink.AddNodeAsync(_client, new Configuration {
                     Severity = LogSeverity.Info
                 });
-                node.TrackFinished += _audio.OnFinshed;
+                node.TrackFinished += _services.GetService<AudioService>().OnFinshed;
                 await _client.SetGameAsync(Global.Config.GameStatus);
             }
             catch (Exception ex)
