@@ -49,6 +49,7 @@ namespace PartyBot.Services
                 {
                     Summoner = user
                 });
+                await LoggingService.LogInformationAsync("Music", $"Now connected to {user.VoiceChannel.Name} and bound to {textChannel.Name}.");
                 return await EmbedHandler.CreateBasicEmbed("Music", $"Now connected to {user.VoiceChannel.Name} and bound to {textChannel.Name}. Get Ready For Betrays...", Color.Blue);
             }
             else
@@ -86,11 +87,12 @@ namespace PartyBot.Services
                     if(player.CurrentTrack != null && player.IsPlaying || player.IsPaused)
                     {
                         player.Queue.Enqueue(track);
+                        await LoggingService.LogInformationAsync("Music", $"{track.Title} has been added to the music queue.");
                         return await EmbedHandler.CreateBasicEmbed("Music", $"{track.Title} has been added to queue.", Color.Blue);
                     }
-
                     //Player was not playing anything, so lets play the requested track.
                     await player.PlayAsync(track);
+                    await LoggingService.LogInformationAsync("Music", $"Bot Now Playing: {track.Title}\nUrl: {track.Uri}");
                     return await EmbedHandler.CreateBasicEmbed("Music", $"Now Playing: {track.Title}\nUrl: {track.Uri}", Color.Blue);
                 }
                 //If after all the checks we did, something still goes wrong. Tell the user about it so they can report it back to us.
@@ -116,9 +118,10 @@ namespace PartyBot.Services
                     await player.StopAsync();
 
                 //Leave the voice channel.
-                var name = player.VoiceChannel.Name;
+                var channelName = player.VoiceChannel.Name;
                 await _lavalink.DefaultNode.DisconnectAsync(guildId);
-                return await EmbedHandler.CreateBasicEmbed("Music", $"I've left {name}. Thank you for playing moosik.", Color.Blue);
+                await LoggingService.LogInformationAsync("Music", $"Bot has left {channelName}.");
+                return await EmbedHandler.CreateBasicEmbed("Music", $"I've left {channelName}. Thank you for playing moosik.", Color.Blue);
             }
             //Tell the user about the error so they can report it back to us.
             catch (InvalidOperationException ex)
@@ -200,6 +203,7 @@ namespace PartyBot.Services
                         var currentTrack = player.CurrentTrack;
                         /* Skip the current song. */
                         await player.SkipAsync();
+                        await LoggingService.LogInformationAsync("Music", $"Bot skipped: {currentTrack.Title}");
                         return await EmbedHandler.CreateBasicEmbed("Music Skip", $"I have successfully skiped {currentTrack.Title}", Color.Blue);
                     }
                     catch (Exception ex)
@@ -231,7 +235,7 @@ namespace PartyBot.Services
                 /* Not sure if this is required as I think player.StopAsync(); clears the queue anyway. */
                 foreach (var track in player.Queue.Items)
                     player.Queue.Dequeue();
-
+                await LoggingService.LogInformationAsync("Music", $"Bot has stopped playback.");
                 return await EmbedHandler.CreateBasicEmbed("Music Stop", "I Have stopped playback & the playlist has been cleared.", Color.Blue);
             }
             catch (Exception ex)
@@ -252,6 +256,7 @@ namespace PartyBot.Services
             {
                 var player = _lavalink.DefaultNode.GetPlayer(guildId);
                 await player.SetVolumeAsync(volume);
+                await LoggingService.LogInformationAsync("Music", $"Bot Volume set to: {volume}");
                 return $"Volume has been set to {volume}.";
             }
             catch (InvalidOperationException ex)
@@ -303,11 +308,13 @@ namespace PartyBot.Services
 
             if (nextTrack is null)
             {
+                await LoggingService.LogInformationAsync("Music", "Bot has stopped playback.");
                 await player.StopAsync();
             }
             else
             {
                 await player.PlayAsync(nextTrack);
+                await LoggingService.LogInformationAsync("Music", $"Bot Now Playing: {nextTrack.Title} - {nextTrack.Uri}");
                 await player.TextChannel.SendMessageAsync("", false, await EmbedHandler.CreateBasicEmbed("Now Playing", $"[{nextTrack.Title}]({nextTrack.Uri})", Color.Blue));
             }
         }
