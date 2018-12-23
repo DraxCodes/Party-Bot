@@ -75,6 +75,7 @@ namespace PartyBot.Services
                 .AddSingleton<CommandHandler>()
                 .AddSingleton<Lavalink>()
                 .AddSingleton<AudioService>()
+                .AddSingleton<BotService>()
                 .BuildServiceProvider();
         }
     }

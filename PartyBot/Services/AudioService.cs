@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Victoria;
 using Victoria.Entities;
 using Victoria.Entities.Enums;
+using Victoria.Entities.Statistics;
 
 namespace PartyBot.Services
 {
@@ -20,6 +21,8 @@ namespace PartyBot.Services
 
         public AudioService(Lavalink lavalink)
             => _lavalink = lavalink;
+
+        #region Music Region
 
         private readonly Lazy<ConcurrentDictionary<ulong, AudioOptions>> _lazyOptions
             = new Lazy<ConcurrentDictionary<ulong, AudioOptions>>();
@@ -84,7 +87,7 @@ namespace PartyBot.Services
                     track = search.Tracks.FirstOrDefault();
 
                     //If the Bot is already playing music, or if it is paused but still has music in the playlist, Add the requested track to the queue.
-                    if(player.CurrentTrack != null && player.IsPlaying || player.IsPaused)
+                    if (player.CurrentTrack != null && player.IsPlaying || player.IsPaused)
                     {
                         player.Queue.Enqueue(track);
                         await LoggingService.LogInformationAsync("Music", $"{track.Title} has been added to the music queue.");
@@ -101,7 +104,7 @@ namespace PartyBot.Services
                     return await EmbedHandler.CreateErrorEmbed("Music, Join/Play", ex.ToString());
                 }
             }
-            
+
         }
 
         /*This is ran when a user uses the command Leave.
@@ -318,5 +321,21 @@ namespace PartyBot.Services
                 await player.TextChannel.SendMessageAsync("", false, await EmbedHandler.CreateBasicEmbed("Now Playing", $"[{nextTrack.Title}]({nextTrack.Uri})", Color.Blue));
             }
         }
+        #endregion
+
+        #region Other
+
+        public async Task<Embed> DisplayStatsAsync()
+        {
+            var node = _lavalink.DefaultNode.Stats;
+            var embed = await Task.Run(() => new EmbedBuilder()
+                .WithTitle("Lavalink Stats")
+                .WithCurrentTimestamp()
+                .WithColor(Color.DarkMagenta)
+                .AddField("Uptime", node.Uptime, true));
+            return embed.Build();
+        }
+
+        #endregion
     }
 }
