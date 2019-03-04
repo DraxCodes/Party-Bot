@@ -4,14 +4,12 @@ using PartyBot.DataStructs;
 using PartyBot.Handlers;
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Victoria;
 using Victoria.Entities;
 using Victoria.Entities.Enums;
-using Victoria.Entities.Statistics;
 
 namespace PartyBot.Services
 {
@@ -321,21 +319,6 @@ namespace PartyBot.Services
                 await player.TextChannel.SendMessageAsync("", false, await EmbedHandler.CreateBasicEmbed("Now Playing", $"[{nextTrack.Title}]({nextTrack.Uri})", Color.Blue));
             }
         }
-        #endregion
-
-        #region Other
-
-        public async Task<Embed> DisplayStatsAsync()
-        {
-            var node = _lavalink.DefaultNode.Stats;
-            var embed = await Task.Run(() => new EmbedBuilder()
-                .WithTitle("Lavalink Stats")
-                .WithCurrentTimestamp()
-                .WithColor(Color.DarkMagenta)
-                .AddField("Uptime", node.Uptime, true));
-            return embed.Build();
-        }
-
         #endregion
     }
 }
