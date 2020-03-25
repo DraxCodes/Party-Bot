@@ -3,10 +3,8 @@ using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PartyBot.Handlers
@@ -53,14 +51,14 @@ namespace PartyBot.Handlers
                 return Task.CompletedTask;
 
             /* Check that the message has our Prefix */
-            if (!message.HasStringPrefix(Global.Config.DefaultPrefix, ref argPos))
+            if (!message.HasStringPrefix(GlobalData.Config.DefaultPrefix, ref argPos))
                 return Task.CompletedTask;
 
             /* Create the CommandContext for use in modules. */
             var context = new SocketCommandContext(_client, socketMessage as SocketUserMessage);
 
             /* Check if the channel ID that the message was sent from is in our Config - Blacklisted Channels. */
-            var blacklistedChannelCheck = from a in Global.Config.BlacklistedChannels
+            var blacklistedChannelCheck = from a in GlobalData.Config.BlacklistedChannels
                                           where a == context.Channel.Id
                                           select a;
             var blacklistedChannel = blacklistedChannelCheck.FirstOrDefault();
@@ -96,7 +94,7 @@ namespace PartyBot.Handlers
                 return;
 
             /* the command failed, let's notify the user that something happened. */
-            await context.Channel.SendMessageAsync($"error: {result.ToString()}");
+            await context.Channel.SendMessageAsync($"error: {result}");
         }
 
         /*Used whenever we want to log something to the Console. 
