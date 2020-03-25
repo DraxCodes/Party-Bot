@@ -14,7 +14,7 @@
 2. Next you will need to clone your forked repo onto your P.C.
 3. Once it's on your machine you will want to run the command: ``dotnet restore`` (Do this in your prefered Terminal)
 **Note: Make sure you do this in the same directory that ``PartyBot.sln`` is stored.** It should look something like this when done.
-```console
+```bash
 foo@bar:~$ dotnet restore
   Restoring packages for C:\Users\YOURNAME\source\repos\PartyBot\PartyBot\PartyBot.csproj...
   Installing Microsoft.NETCore.DotNetAppHost 2.0.0.
@@ -29,7 +29,7 @@ foo@bar:~$ dotnet restore
 foo@bar:~$
 ```
 4. Just to be safe we'll also do ``dotnet build`` which should output like so:
-```console
+```bash
 foo@bar:~$ dotnet build
 Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
@@ -55,5 +55,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* The Discord.Net Discord Community.
-* Yucked for his support with Victoria.
+* Yucked for Victoria.
