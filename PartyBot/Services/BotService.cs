@@ -12,14 +12,14 @@ namespace PartyBot.Services
 {
     public sealed class BotService
     {
-        public AudioService Audio { get; set; }
+        public LavaLinkAudio Audio { get; set; }
 
         public async Task<Embed> DisplayInfoAsync(SocketCommandContext context)
         {
             var fields = new List<EmbedFieldBuilder>();
             fields.Add(new EmbedFieldBuilder {
                 Name = "Client Info",
-                Value = $"Current Server: {context.Guild.Name} - Prefix: {Global.Config.DefaultPrefix}",
+                Value = $"Current Server: {context.Guild.Name} - Prefix: {GlobalData.Config.DefaultPrefix}",
                 IsInline = false
             });
             fields.Add(new EmbedFieldBuilder {

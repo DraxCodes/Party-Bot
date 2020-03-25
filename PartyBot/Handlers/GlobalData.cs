@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using PartyBot.DataStructs;
 using PartyBot.Services;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -10,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PartyBot.Handlers
 {
-    public class Global
+    public class GlobalData
     {
         public static string ConfigPath { get; set; } = "config.json";
         public static BotConfig Config { get; set; }
@@ -18,7 +17,7 @@ namespace PartyBot.Handlers
         //Initialize the Config and Global Properties.
         //TODO (Check token validity before but starts,
         //right now if the config file is generated but the user hasn't filled it out it will throw a null exception error.
-        public async Task Initialize()
+        public async Task InitializeAsync()
         {
             var json = string.Empty;
 

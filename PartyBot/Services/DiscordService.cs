@@ -11,46 +11,64 @@ namespace PartyBot.Services
 {
     public class DiscordService
     {
-        private DiscordSocketClient _client;
-        private ServiceProvider _services;
-        private Lavalink _lavaLink;
+        private readonly DiscordSocketClient _client;
+        private readonly CommandHandler _commandHandler;
+        private readonly ServiceProvider _services;
+        private readonly LavaNode _lavaNode;
+        private readonly LavaLinkAudio _audioService;
+        private readonly GlobalData _globalData;
+
+        public DiscordService()
+        {
+            _services = ConfigureServices();
+            _client = _services.GetRequiredService<DiscordSocketClient>();
+            _commandHandler = _services.GetRequiredService<CommandHandler>();
+            _lavaNode = _services.GetRequiredService<LavaNode>();
+            _globalData = _services.GetRequiredService<GlobalData>();
+            _audioService = _services.GetRequiredService<LavaLinkAudio>();
+
+            SubscribeLavaLinkEvents();
+            SubscribeDiscordEvents();
+        }
 
         /* Initialize the Discord Client. */
         public async Task InitializeAsync()
         {
-            _services = ConfigureServices();
-            _client = _services.GetRequiredService<DiscordSocketClient>();
-            _lavaLink = _services.GetRequiredService<Lavalink>();
-            var global = new Global().Initialize();
-            HookEvents();
+            await InitializeGlobalDataAsync();
 
-            await _client.LoginAsync(TokenType.Bot, Global.Config.DiscordToken);
+            await _client.LoginAsync(TokenType.Bot, GlobalData.Config.DiscordToken);
             await _client.StartAsync();
 
-            await _services.GetRequiredService<CommandHandler>().InitializeAsync();
+            await _commandHandler.InitializeAsync();
 
             await Task.Delay(-1);
         }
 
         /* Hook Any Client Events Up Here. */
-        private void HookEvents()
+        private void SubscribeLavaLinkEvents()
         {
-            _lavaLink.Log += LogAsync;
+            _lavaNode.OnLog += LogAsync;
+            _lavaNode.OnTrackEnded += _audioService.TrackEnded;
+        }
+
+        private void SubscribeDiscordEvents()
+        {
+            _client.Ready += ReadyAsync;
             _client.Log += LogAsync;
-            _services.GetRequiredService<CommandService>().Log += LogAsync;
-            _client.Ready += OnReadyAsync;
+        }
+
+        private async Task InitializeGlobalDataAsync()
+        {
+            await _globalData.InitializeAsync();
         }
 
         /* Used when the Client Fires the ReadyEvent. */
-        private async Task OnReadyAsync()
+        private async Task ReadyAsync()
         {
             try
             {
-                var node = await _lavaLink.AddNodeAsync(_client, new Configuration {
-                    Severity = LogSeverity.Info
-                });
-                node.TrackFinished += _services.GetService<AudioService>().OnFinshed;
-                await _client.SetGameAsync(Global.Config.GameStatus);
+                await _lavaNode.ConnectAsync();
+                await _client.SetGameAsync(GlobalData.Config.GameStatus);
             }
             catch (Exception ex)
             {
@@ -73,9 +91,11 @@ namespace PartyBot.Services
                 .AddSingleton<DiscordSocketClient>()
                 .AddSingleton<CommandService>()
                 .AddSingleton<CommandHandler>()
-                .AddSingleton<Lavalink>()
-                .AddSingleton<AudioService>()
+                .AddSingleton<LavaNode>()
+                .AddSingleton(new LavaConfig())
+                .AddSingleton<LavaLinkAudio>()
                 .AddSingleton<BotService>()
+                .AddSingleton<GlobalData>()
                 .BuildServiceProvider();
         }
     }
