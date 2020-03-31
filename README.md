@@ -4,17 +4,21 @@
 
 ## Built With
 
-* [DotNet Core (Version - 2.1)](https://dotnet.microsoft.com/download/dotnet-core/2.2) - Dotnet version.
-* [Discord.Net (Version - 2.0.0-beta2-01039)](https://github.com/RogueException/Discord.Net) - The Discord Library used
-* [Victoria (Version - 3.1.2)](https://github.com/Yucked/Victoria) - LavaLink Library.
+* [DotNet Core (Version - 3.1)](https://dotnet.microsoft.com/download/dotnet-core/2.2) - Dotnet version.
+* [Discord.Net (Version - 2.1.1)](https://github.com/RogueException/Discord.Net) - The Discord Library used
+* [Victoria (Version - 5.1.2)](https://github.com/Yucked/Victoria) - LavaLink Library.
 
-## Want to use this as a template to build off?
-**NOTE: This Requires At-Least C# Version 7.2**
+## Use this as a template to build off
+
+### NOTE: This Requires At-Least C# Version 8.0
+
 1. First Make sure you have a fork of this repo. (Makes it easier for you to then commit your own changes to your GitHub)
 2. Next you will need to clone your forked repo onto your P.C.
 3. Once it's on your machine you will want to run the command: ``dotnet restore`` (Do this in your prefered Terminal)
+
 **Note: Make sure you do this in the same directory that ``PartyBot.sln`` is stored.** It should look something like this when done.
-```bash
+
+```terminal
 foo@bar:~$ dotnet restore
   Restoring packages for C:\Users\YOURNAME\source\repos\PartyBot\PartyBot\PartyBot.csproj...
   Installing Microsoft.NETCore.DotNetAppHost 2.0.0.
@@ -28,8 +32,10 @@ foo@bar:~$ dotnet restore
   Restore completed in 4.94 sec for C:\Users\YOURNAME\source\repos\PartyBot\PartyBot\PartyBot.csproj.
 foo@bar:~$
 ```
+
 4. Just to be safe we'll also do ``dotnet build`` which should output like so:
-```bash
+
+```terminal
 foo@bar:~$ dotnet build
 Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
@@ -43,6 +49,7 @@ Build succeeded.
 
 Time Elapsed 00:00:01.41
 ```
+
 5. You can now open the .sln file with Visual Studio or open the folder structure in your prefered IDE/Text Editor.
 
 ## Authors
