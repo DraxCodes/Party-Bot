@@ -249,9 +249,9 @@ namespace PartyBot.Services
             Task Returns a String which is used in the command call. */
         public async Task<string> SetVolumeAsync(IGuild guild, int volume)
         {
-            if (volume >= 150 || volume <= 0)
+            if (volume > 150 || volume <= 0)
             {
-                return $"Volume must be between 0 and 150.";
+                return $"Volume must be between 1 and 150.";
             }
             try
             {
@@ -307,7 +307,7 @@ namespace PartyBot.Services
 
         public async Task TrackEnded(TrackEndedEventArgs args)
         {
-            if (args.Reason.ShouldPlayNext())
+            if (!args.Reason.ShouldPlayNext())
             {
                 return;
             }
