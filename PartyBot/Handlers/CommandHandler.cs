@@ -73,10 +73,10 @@ namespace PartyBot.Handlers
                 var result = _commands.ExecuteAsync(context, argPos, _services, MultiMatchHandling.Best);
 
                 /* Report any errors if the command didn't execute succesfully. */
-                if (!result.Result.IsSuccess)
-                {
-                    context.Channel.SendMessageAsync(result.Result.ErrorReason);
-                }
+                //if (!result.Result.IsSuccess)
+                //{
+                //    context.Channel.SendMessageAsync(result.Result.ErrorReason);
+                //}
 
                 /* If everything worked fine, command will run. */
                 return result;
