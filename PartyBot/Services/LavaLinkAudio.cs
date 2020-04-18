@@ -326,7 +326,7 @@ namespace PartyBot.Services
 
             await args.Player.PlayAsync(track);
             await args.Player.TextChannel.SendMessageAsync(
-                embed: await EmbedHandler.CreateBasicEmbed("Now Playing", $"[{args.Track.Title}]({args.Track.Url})", Color.Blue));
+                embed: await EmbedHandler.CreateBasicEmbed("Now Playing", $"[{track.Title}]({track.Url})", Color.Blue));
         }
     }
 }
