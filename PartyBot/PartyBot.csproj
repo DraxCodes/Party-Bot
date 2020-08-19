@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="Discord.Net" Version="2.1.1" />
-    <PackageReference Include="Victoria" Version="5.1.2" />
+    <PackageReference Include="Victoria" Version="5.1.8" />
   </ItemGroup>
 
 </Project>
