@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Victoria;
 using Victoria.EventArgs;
 using Victoria.Enums;
+using Victoria.Responses.Rest;
 
 namespace PartyBot.Services
 {
@@ -65,7 +66,10 @@ namespace PartyBot.Services
 
                 //Find The Youtube Track the User requested.
                 LavaTrack track;
-                var search = await _lavaNode.SearchAsync(query);
+
+                var search = Uri.IsWellFormedUriString(query, UriKind.Absolute) ?
+                    await _lavaNode.SearchAsync(query)
+                    : await _lavaNode.SearchYouTubeAsync(query);
 
                 //If we couldn't find anything, tell the user.
                 if (search.LoadStatus == LoadStatus.NoMatches)
@@ -117,8 +121,6 @@ namespace PartyBot.Services
                 //Leave the voice channel.
                 await _lavaNode.LeaveAsync(player.VoiceChannel);
 
-                await player.DisposeAsync();
-
                 await LoggingService.LogInformationAsync("Music", $"Bot has left.");
                 return await EmbedHandler.CreateBasicEmbed("Music", $"I've left. Thank you for playing moosik.", Color.Blue);
             }
@@ -157,7 +159,7 @@ namespace PartyBot.Services
                          *  Next Add the Track title and the url however make use of Discords Markdown feature to display everything neatly.
                             This trackNum variable is used to display the number in which the song is in place. (Start at 2 because we're including the current song.*/
                         var trackNum = 2;
-                        foreach (LavaTrack track in player.Queue.Items)
+                        foreach (LavaTrack track in player.Queue)
                         {
                             descriptionBuilder.Append($"{trackNum}: [{track.Title}]({track.Url}) - {track.Id}\n");
                             trackNum++;
