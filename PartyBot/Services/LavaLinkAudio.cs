@@ -71,6 +71,11 @@ namespace PartyBot.Services
                     await _lavaNode.SearchAsync(query)
                     : await _lavaNode.SearchYouTubeAsync(query);
 
+                Console.WriteLine(search.ToString());
+                Console.WriteLine(search.LoadStatus.ToString());
+                Console.WriteLine(search.Exception.Severity);
+                Console.WriteLine(search.Exception.Message);
+
                 //If we couldn't find anything, tell the user.
                 if (search.LoadStatus == LoadStatus.NoMatches)
                 {
@@ -81,6 +86,9 @@ namespace PartyBot.Services
                 //TODO: Add a 1-5 list for the user to pick from. (Like Fredboat)
                 track = search.Tracks.FirstOrDefault();
 
+
+                Console.WriteLine("after first or default track");
+
                 //If the Bot is already playing music, or if it is paused but still has music in the playlist, Add the requested track to the queue.
                 if (player.Track != null && player.PlayerState is PlayerState.Playing || player.PlayerState is PlayerState.Paused)
                 {
@@ -88,6 +96,8 @@ namespace PartyBot.Services
                     await LoggingService.LogInformationAsync("Music", $"{track.Title} has been added to the music queue.");
                     return await EmbedHandler.CreateBasicEmbed("Music", $"{track.Title} has been added to queue.", Color.Blue);
                 }
+
+                Console.WriteLine("Right before player");
 
                 //Player was not playing anything, so lets play the requested track.
                 await player.PlayAsync(track);
@@ -122,7 +132,7 @@ namespace PartyBot.Services
                 await _lavaNode.LeaveAsync(player.VoiceChannel);
 
                 await LoggingService.LogInformationAsync("Music", $"Bot has left.");
-                return await EmbedHandler.CreateBasicEmbed("Music", $"I've left. Thank you for playing moosik.", Color.Blue);
+                return await EmbedHandler.CreateBasicEmbed("Music", $"I've left. Thank you for playing music.", Color.Blue);
             }
             //Tell the user about the error so they can report it back to us.
             catch (InvalidOperationException ex)
@@ -193,7 +203,7 @@ namespace PartyBot.Services
                      User is expected to use the Stop command if they're only wanting to skip the current song. */
                 if (player.Queue.Count < 1)
                 {
-                    return await EmbedHandler.CreateErrorEmbed("Music, SkipTrack", $"Unable To skip a track as there is only One or No songs currently playing." +
+                    return await EmbedHandler.CreateErrorEmbed("Music, SkipTrack", $"Unable To skip a track as there is only one or no songs currently playing." +
                         $"\n\nDid you mean {GlobalData.Config.DefaultPrefix}Stop?");
                 }
                 else
@@ -205,7 +215,7 @@ namespace PartyBot.Services
                         /* Skip the current song. */
                         await player.SkipAsync();
                         await LoggingService.LogInformationAsync("Music", $"Bot skipped: {currentTrack.Title}");
-                        return await EmbedHandler.CreateBasicEmbed("Music Skip", $"I have successfully skiped {currentTrack.Title}", Color.Blue);
+                        return await EmbedHandler.CreateBasicEmbed("Music Skip", $"I have successfully skipped {currentTrack.Title}", Color.Blue);
                     }
                     catch (Exception ex)
                     {
