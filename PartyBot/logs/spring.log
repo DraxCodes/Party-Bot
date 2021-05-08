@@ -1,4 +1,4 @@
-2021-05-06 19:14:09.710  INFO 28944 --- [main] lavalink.server.Launcher                 : 
+2021-05-08 10:29:56.572  INFO 16316 --- [main] lavalink.server.Launcher                 : 
 
 [32m       .  [31m _                  _ _       _    [32m__ _ _
 [32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
@@ -13,10 +13,10 @@
 	Branch          master
 	Commit:         2ac6bf4
 	Commit time:    20.04.2021 07:02:46 UTC
-	JVM:            11.0.2
+	JVM:            16
 	Lavaplayer      1.3.76
 
-2021-05-06 19:14:09.760  INFO 28944 --- [main] o.s.boot.SpringApplication               : 
+2021-05-08 10:29:56.624  INFO 16316 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -26,34 +26,201 @@
  :: Spring Boot ::        (v2.1.8.RELEASE)
 
 
-2021-05-06 19:14:09.859  INFO 28944 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-FAQV1B7 with PID 28944 (C:\Users\Casey\source\repos\Party-Bot\PartyBot\Lavalink.jar started by Casey in C:\Users\Casey\source\repos\Party-Bot\PartyBot)
-2021-05-06 19:14:09.859  INFO 28944 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
-2021-05-06 19:14:09.941  WARN 28944 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2021-05-06 19:14:11.195  WARN 28944 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-05-06 19:14:11.218  INFO 28944 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-05-06 19:14:11.219  INFO 28944 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1308 ms
-2021-05-06 19:14:11.560  WARN 28944 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2021-05-06 19:14:11.809  INFO 28944 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2021-05-06 19:14:11.989  INFO 28944 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
-2021-05-06 19:14:11.990  WARN 28944 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
-2021-05-06 19:14:12.205  INFO 28944 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-05-06 19:14:12.506  INFO 28944 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
-2021-05-06 19:14:12.516  INFO 28944 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
-2021-05-06 19:14:12.573  INFO 28944 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
-2021-05-06 19:14:12.578  INFO 28944 --- [main] lavalink.server.Launcher                 : Started Launcher in 3.343 seconds (JVM running for 3.842)
-2021-05-06 19:14:12.579  INFO 28944 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
-2021-05-06 19:14:24.254  INFO 28944 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-05-06 19:14:24.254  INFO 28944 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-05-06 19:14:24.262  INFO 28944 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2021-05-06 19:14:24.286  INFO 28944 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:62709
-2021-05-06 19:14:24.354  INFO 28944 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:62709
-2021-05-06 19:14:50.601  INFO 28944 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"1d7c8e900be9f1ea1a8b43a697756559","event":{"token":"48a28358b97e232a","endpoint":"us-west6624.discord.media:443"},"op":"voiceUpdate"}
-2021-05-06 19:15:04.988  INFO 28944 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:attack on titan final season ed"
-2021-05-06 19:15:06.089  INFO 28944 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: attack on titan final season ed
-2021-05-06 19:15:06.131  INFO 28944 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"endTime":196000,"track":"QAAApwIAQUF0dGFjayBvbiBUaXRhbiBGaW5hbCBTZWFzb24gLSBFbmRpbmcgRnVsbOOAjll1a28gQW5kbyAtIFNob2Nr44CPAAxNZWxvZGljIFN0YXIAAAAAAAL9oAALNWVwdlA5dW5MM1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01ZXB2UDl1bkwzUQAHeW91dHViZQAAAAAAAAAA","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-06 19:18:35.635  INFO 28944 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:62709 -- CloseStatus[code=1006, reason=]
-2021-05-06 19:18:35.635  INFO 28944 --- [XNIO-1 I/O-9] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-06 19:19:13.369  INFO 13404 --- [main] lavalink.server.Launcher                 : 
+2021-05-08 10:29:56.723  INFO 16316 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-FAQV1B7 with PID 16316 (C:\Users\Casey\source\repos\Party-Bot\PartyBot\Lavalink.jar started by Casey in C:\Users\Casey\source\repos\Party-Bot\PartyBot)
+2021-05-08 10:29:56.723  INFO 16316 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2021-05-08 10:29:58.084  WARN 16316 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-05-08 10:29:58.124  INFO 16316 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-05-08 10:29:58.124  INFO 16316 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1355 ms
+2021-05-08 10:29:58.494  WARN 16316 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2021-05-08 10:29:59.016  INFO 16316 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2021-05-08 10:29:59.280  INFO 16316 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2021-05-08 10:29:59.281  WARN 16316 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2021-05-08 10:29:59.533  INFO 16316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-08 10:29:59.842  INFO 16316 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2021-05-08 10:29:59.854  INFO 16316 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2021-05-08 10:29:59.930  INFO 16316 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2021-05-08 10:29:59.935  INFO 16316 --- [main] lavalink.server.Launcher                 : Started Launcher in 4.191 seconds (JVM running for 6.014)
+2021-05-08 10:29:59.936  INFO 16316 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2021-05-08 10:30:19.470  INFO 16316 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-08 10:30:19.471  INFO 16316 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-08 10:30:19.479  INFO 16316 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-05-08 10:30:19.500  INFO 16316 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:50829
+2021-05-08 10:30:19.579  INFO 16316 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:50829
+2021-05-08 10:30:27.201  INFO 16316 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"f9e2c07b330f3d387689dee969da4b7f","event":{"token":"7d29c98feb9803d9","endpoint":"us-west5834.discord.media:443"},"op":"voiceUpdate"}
+2021-05-08 10:30:48.804  INFO 16316 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:shin sekai yori ed"
+2021-05-08 10:30:49.620  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: shin sekai yori ed
+2021-05-08 10:30:49.656  INFO 16316 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAdwIAFlNoaW5zZWthaSBZb3JpIEVEIDEgSEQAB25pYXJjaHkAAAAAAAFfkAALbXoxeXB1R0ozVk0AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1tejF5cHVHSjNWTQAHeW91dHViZQAAAAAAAAAA","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
+2021-05-08 10:31:05.403  INFO 16316 --- [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=mz1ypuGJ3VM"
+2021-05-08 10:31:06.357  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Shinsekai Yori ED 1 HD
+2021-05-08 10:31:42.914  INFO 16316 --- [XNIO-1 task-6] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://soundcloud.com/dj-khaled/every-chance-i-get-feat-lil"
+2021-05-08 10:31:42.916  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.s.SoundCloudClientIdTracker    : Updating SoundCloud client ID (current is null).
+2021-05-08 10:31:43.385  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.s.SoundCloudClientIdTracker    : Updating SoundCloud client ID succeeded, new ID is ggRYFP99dmrmh4lmB631wc5Hb4Zk6QRw.
+2021-05-08 10:31:43.818  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track EVERY CHANCE I GET (feat. Lil Baby & Lil Durk)
+2021-05-08 10:32:23.559  INFO 16316 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAdwIAFlNoaW5zZWthaSBZb3JpIEVEIDEgSEQAB25pYXJjaHkAAAAAAAFfkAALbXoxeXB1R0ozVk0AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1tejF5cHVHSjNWTQAHeW91dHViZQAAAAAAAAAA","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
+2021-05-08 10:33:41.122  INFO 16316 --- [XNIO-1 task-8] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://files.catbox.moe/f59yz4.mp3"
+2021-05-08 10:33:41.244  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
+2021-05-08 10:33:41.245  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
+2021-05-08 10:33:41.313  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
+2021-05-08 10:33:41.313  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
+2021-05-08 10:33:41.386  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
+2021-05-08 10:33:41.387  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
+2021-05-08 10:33:41.454  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
+2021-05-08 10:33:41.454  INFO 16316 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
+2021-05-08 10:33:41.528  WARN 16316 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.p.DefaultAudioPlayerManager      : Suspicious exception for loading item https://files.catbox.moe/f59yz4.mp3
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.76
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 16
+  java.runtime.version: 16+36-2231
+  java.vm.version: 16+36-2231
+Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
+	... 8 common frames omitted
+
+2021-05-08 10:33:41.529 ERROR 16316 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.76
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 16
+  java.runtime.version: 16+36-2231
+  java.vm.version: 16+36-2231
+Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
+	... 8 common frames omitted
+
+2021-05-08 10:33:41.529 ERROR 16316 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.76
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 16
+  java.runtime.version: 16+36-2231
+  java.vm.version: 16+36-2231
+Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
+	... 8 common frames omitted
+
+2021-05-08 10:33:54.392  INFO 16316 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAABDAIALkVWRVJZIENIQU5DRSBJIEdFVCAoZmVhdC4gTGlsIEJhYnkgJiBMaWwgRHVyaykACURKIEtoYWxlZAAAAAAAA5wVAHJPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQuY29tL21lZGlhL3NvdW5kY2xvdWQ6dHJhY2tzOjEwMzk1MzkyNzQvNDdiMDdmNGItNzk1Ny00NDZhLWEyMWQtOWJhZGQzZjVhNTRiL3N0cmVhbS9obHMAAQA8aHR0cHM6Ly9zb3VuZGNsb3VkLmNvbS9kai1raGFsZWQvZXZlcnktY2hhbmNlLWktZ2V0LWZlYXQtbGlsAApzb3VuZGNsb3VkAAAAAAAAAAA=","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
+2021-05-08 10:41:46.374  INFO 16316 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-08 10:41:46.376  INFO 16316 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2021-05-08 10:41:46.378  INFO 16316 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-05-08 10:41:46.382 ERROR 16316 --- [XNIO-1 I/O-1] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
+
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:590) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.0.26.Final.jar!/:2.0.26.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1063) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:978) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.terminated(WriteReadyHandler.java:70) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.writeTerminated(NioSocketConduit.java:234) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:223) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:228) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at io.undertow.conduits.IdleTimeoutConduit.truncateWrites(IdleTimeoutConduit.java:387) ~[undertow-core-2.0.26.Final.jar!/:2.0.26.Final]
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.IoUtils.safeClose(IoUtils.java:134) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57) ~[xnio-api-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:107) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:494) ~[xnio-nio-3.3.8.Final.jar!/:3.3.8.Final]
+
+2021-05-08 10:43:09.924  INFO 16116 --- [main] lavalink.server.Launcher                 : 
 
 [32m       .  [31m _                  _ _       _    [32m__ _ _
 [32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
@@ -68,10 +235,10 @@
 	Branch          master
 	Commit:         2ac6bf4
 	Commit time:    20.04.2021 07:02:46 UTC
-	JVM:            11.0.2
+	JVM:            16
 	Lavaplayer      1.3.76
 
-2021-05-06 19:19:13.417  INFO 13404 --- [main] o.s.boot.SpringApplication               : 
+2021-05-08 10:43:09.962  INFO 16116 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -81,941 +248,72 @@
  :: Spring Boot ::        (v2.1.8.RELEASE)
 
 
-2021-05-06 19:19:13.503  INFO 13404 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-FAQV1B7 with PID 13404 (C:\Users\Casey\source\repos\Party-Bot\PartyBot\Lavalink.jar started by Casey in C:\Users\Casey\source\repos\Party-Bot\PartyBot)
-2021-05-06 19:19:13.504  INFO 13404 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
-2021-05-06 19:19:13.572  WARN 13404 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2021-05-06 19:19:14.686  WARN 13404 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-05-06 19:19:14.712  INFO 13404 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-05-06 19:19:14.713  INFO 13404 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1165 ms
-2021-05-06 19:19:15.081  WARN 13404 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2021-05-06 19:19:15.330  INFO 13404 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2021-05-06 19:19:15.503  INFO 13404 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
-2021-05-06 19:19:15.503  WARN 13404 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
-2021-05-06 19:19:15.708  INFO 13404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-05-06 19:19:15.986  INFO 13404 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
-2021-05-06 19:19:15.996  INFO 13404 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
-2021-05-06 19:19:16.073  INFO 13404 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
-2021-05-06 19:19:16.079  INFO 13404 --- [main] lavalink.server.Launcher                 : Started Launcher in 3.194 seconds (JVM running for 3.702)
-2021-05-06 19:19:16.080  INFO 13404 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
-2021-05-06 19:19:27.808  INFO 13404 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-05-06 19:19:27.809  INFO 13404 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-05-06 19:19:27.816  INFO 13404 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2021-05-06 19:19:27.840  INFO 13404 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:58130
-2021-05-06 19:19:27.907  INFO 13404 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:58130
-2021-05-06 19:19:39.753  INFO 13404 --- [XNIO-1 I/O-14] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"c255b2df5a014b13001a410297b19d7e","event":{"token":"48a28358b97e232a","endpoint":"us-west6624.discord.media:443"},"op":"voiceUpdate"}
-2021-05-06 19:19:54.559  INFO 13404 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:attack on titan final season ed"
-2021-05-06 19:19:55.708  INFO 13404 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: attack on titan final season ed
-2021-05-06 19:19:55.745  INFO 13404 --- [XNIO-1 I/O-14] lavalink.server.io.SocketServer          : {"endTime":196000,"track":"QAAApwIAQUF0dGFjayBvbiBUaXRhbiBGaW5hbCBTZWFzb24gLSBFbmRpbmcgRnVsbOOAjll1a28gQW5kbyAtIFNob2Nr44CPAAxNZWxvZGljIFN0YXIAAAAAAAL9oAALNWVwdlA5dW5MM1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01ZXB2UDl1bkwzUQAHeW91dHViZQAAAAAAAAAA","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-06 19:21:38.539  INFO 13404 --- [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:quintessential quintuplets op"
-2021-05-06 19:21:39.400  INFO 13404 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: quintessential quintuplets op
-2021-05-06 19:21:42.667  INFO 13404 --- [XNIO-1 I/O-14] lavalink.server.io.SocketServer          : {"endTime":91000,"track":"QAAArAIASFRoZSBRdWludGVzc2VudGlhbCBRdWludHVwbGV0cyDigJMgT3BlbmluZyBUaGVtZSDigJMgR290b3VidW4gbm8gS2ltb2NoaQAKRnVuaW1hdGlvbgAAAAAAAWN4AAtGS0lUNkdfbHc3YwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUZLSVQ2R19sdzdjAAd5b3V0dWJlAAAAAAAAAAA=","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-06 19:30:22.672  INFO 13404 --- [XNIO-1 I/O-14] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:58130 -- CloseStatus[code=1006, reason=]
-2021-05-06 19:30:22.672  INFO 13404 --- [XNIO-1 I/O-14] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-06 20:25:28.224  INFO 8024 --- [main] lavalink.server.Launcher                 : 
-
-[32m       .  [31m _                  _ _       _    [32m__ _ _
-[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
-[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
-[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
-[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
-[0m    =========================================[32m/_/_/_/[0m
-
-	Version:        2ac6bf4e0dcab9ba7493b0494316b8bee698913d-SNAPSHOT
-	Build:          1232
-	Build time:     20.04.2021 07:05:21 UTC
-	Branch          master
-	Commit:         2ac6bf4
-	Commit time:    20.04.2021 07:02:46 UTC
-	JVM:            11.0.2
-	Lavaplayer      1.3.76
-
-2021-05-06 20:25:28.270  INFO 8024 --- [main] o.s.boot.SpringApplication               : 
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.1.8.RELEASE)
-
-
-2021-05-06 20:25:28.365  INFO 8024 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-FAQV1B7 with PID 8024 (C:\Users\Casey\source\repos\Party-Bot\PartyBot\Lavalink.jar started by Casey in C:\Users\Casey\source\repos\Party-Bot\PartyBot)
-2021-05-06 20:25:28.365  INFO 8024 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
-2021-05-06 20:25:28.426  WARN 8024 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2021-05-06 20:25:29.657  WARN 8024 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-05-06 20:25:29.685  INFO 8024 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-05-06 20:25:29.685  INFO 8024 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1272 ms
-2021-05-06 20:25:30.057  WARN 8024 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2021-05-06 20:25:30.324  INFO 8024 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2021-05-06 20:25:30.493  INFO 8024 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
-2021-05-06 20:25:30.493  WARN 8024 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
-2021-05-06 20:25:30.699  INFO 8024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-05-06 20:25:30.993  INFO 8024 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
-2021-05-06 20:25:31.005  INFO 8024 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
-2021-05-06 20:25:31.087  INFO 8024 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
-2021-05-06 20:25:31.093  INFO 8024 --- [main] lavalink.server.Launcher                 : Started Launcher in 3.367 seconds (JVM running for 3.875)
-2021-05-06 20:25:31.095  INFO 8024 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
-2021-05-06 20:25:34.821  INFO 8024 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-05-06 20:25:34.822  INFO 8024 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-05-06 20:25:34.832  INFO 8024 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2021-05-06 20:25:34.856  INFO 8024 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59115
-2021-05-06 20:25:34.926  INFO 8024 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:59115
-2021-05-06 20:25:42.744  INFO 8024 --- [XNIO-1 I/O-15] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"6ac5d6d745bf8a673d75501730c3b9ba","event":{"token":"9b14b64fbbb19d23","endpoint":"us-west6624.discord.media:443"},"op":"voiceUpdate"}
-2021-05-06 20:26:21.539  INFO 8024 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://files.catbox.moe/f71cx8.mp3"
-2021-05-06 20:26:21.849  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:26:21.850  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:26:22.020  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:26:22.021  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:26:22.079  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:26:22.079  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:26:22.133  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:26:22.133  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:26:22.195  WARN 8024 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.p.DefaultAudioPlayerManager      : Suspicious exception for loading item https://files.catbox.moe/f71cx8.mp3
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 20:26:22.196 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 20:26:22.198 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 20:29:22.999  INFO 8024 --- [XNIO-1 I/O-15] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59115 -- CloseStatus[code=1006, reason=]
-2021-05-06 20:29:23.000  INFO 8024 --- [XNIO-1 I/O-15] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-06 20:31:14.814  INFO 8024 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59199
-2021-05-06 20:31:14.817  INFO 8024 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:59199
-2021-05-06 20:31:23.326  INFO 8024 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"59fb1afd0ae4e2a56601df2a1ebf4f10","event":{"token":"3a20be74200e59d2","endpoint":"us-west6624.discord.media:443"},"op":"voiceUpdate"}
-2021-05-06 20:31:31.070  INFO 8024 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://files.catbox.moe/f71cx8.mp3"
-2021-05-06 20:31:31.437  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:31:31.437  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:31:31.704  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:31:31.704  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:31:31.824  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:31:31.825  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:31:31.901  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:31:31.902  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:31:31.957  WARN 8024 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.p.DefaultAudioPlayerManager      : Suspicious exception for loading item https://files.catbox.moe/f71cx8.mp3
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 20:31:31.958 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 20:31:31.959 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 20:58:22.486  INFO 8024 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59199 -- CloseStatus[code=1006, reason=]
-2021-05-06 20:58:22.487  INFO 8024 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-06 20:59:34.383  INFO 8024 --- [XNIO-1 task-7] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59591
-2021-05-06 20:59:34.386  INFO 8024 --- [XNIO-1 task-7] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:59591
-2021-05-06 20:59:38.123  INFO 8024 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"39d029c60c2d7152f2c1b814908dd819","event":{"token":"3a20be74200e59d2","endpoint":"us-west6624.discord.media:443"},"op":"voiceUpdate"}
-2021-05-06 20:59:46.599  INFO 8024 --- [XNIO-1 task-8] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://files.catbox.moe/f71cx8.mp3"
-2021-05-06 20:59:46.848  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:59:46.848  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:59:46.998  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:59:46.998  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:59:47.149  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:59:47.150  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:59:47.306  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 20:59:47.307  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 20:59:47.405  WARN 8024 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.p.DefaultAudioPlayerManager      : Suspicious exception for loading item https://files.catbox.moe/f71cx8.mp3
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 20:59:47.406 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 20:59:47.406 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:04:13.016  INFO 8024 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59591 -- CloseStatus[code=1006, reason=]
-2021-05-06 21:04:13.016  INFO 8024 --- [XNIO-1 I/O-11] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-06 21:09:37.053  INFO 8024 --- [XNIO-1 task-10] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59704
-2021-05-06 21:09:37.056  INFO 8024 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:59704
-2021-05-06 21:09:42.939  INFO 8024 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"2cbfd00bbfe6e8661239d5e158199803","event":{"token":"619cf93381d9f203","endpoint":"us-west6624.discord.media:443"},"op":"voiceUpdate"}
-2021-05-06 21:09:46.907  INFO 8024 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://files.catbox.moe/f71cx8.mp3"
-2021-05-06 21:09:46.964  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:09:46.964  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:09:47.022  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:09:47.022  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:09:47.095  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:09:47.095  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:09:47.151  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:09:47.151  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:09:47.205  WARN 8024 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.p.DefaultAudioPlayerManager      : Suspicious exception for loading item https://files.catbox.moe/f71cx8.mp3
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:09:47.206 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:09:47.206 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:10:43.930  INFO 8024 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59704 -- CloseStatus[code=1006, reason=]
-2021-05-06 21:10:43.930  INFO 8024 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-06 21:18:31.598  INFO 8024 --- [XNIO-1 task-13] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59817
-2021-05-06 21:18:31.602  INFO 8024 --- [XNIO-1 task-13] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:59817
-2021-05-06 21:18:37.092  INFO 8024 --- [XNIO-1 I/O-13] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"92047b88b9bb88cc12c3fc6185670fe9","event":{"token":"98276df9e4950da1","endpoint":"us-west6624.discord.media:443"},"op":"voiceUpdate"}
-2021-05-06 21:18:43.525  INFO 8024 --- [XNIO-1 task-14] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://files.catbox.moe/f71cx8.mp3"
-2021-05-06 21:18:43.660  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:18:43.660  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:18:43.732  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:18:43.732  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:18:43.807  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:18:43.807  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:18:43.897  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:18:43.897  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:18:43.963  WARN 8024 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.p.DefaultAudioPlayerManager      : Suspicious exception for loading item https://files.catbox.moe/f71cx8.mp3
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:18:43.964 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:18:43.964 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:21:27.319  INFO 8024 --- [XNIO-1 I/O-13] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59817 -- CloseStatus[code=1006, reason=]
-2021-05-06 21:21:27.320  INFO 8024 --- [XNIO-1 I/O-13] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-06 21:21:59.446  INFO 8024 --- [XNIO-1 task-16] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59877
-2021-05-06 21:21:59.449  INFO 8024 --- [XNIO-1 task-16] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:59877
-2021-05-06 21:22:08.997  INFO 8024 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"d287cab22b4d0544bf5eba927222527a","event":{"token":"98276df9e4950da1","endpoint":"us-west6624.discord.media:443"},"op":"voiceUpdate"}
-2021-05-06 21:22:11.137  INFO 8024 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","op":"stop"}
-2021-05-06 21:22:11.143  INFO 8024 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","op":"destroy"}
-2021-05-06 21:22:14.135  INFO 8024 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"d287cab22b4d0544bf5eba927222527a","event":{"token":"6c6fe8475645b7c9","endpoint":"us-west6624.discord.media:443"},"op":"voiceUpdate"}
-2021-05-06 21:22:25.574  INFO 8024 --- [XNIO-1 task-17] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://files.catbox.moe/f71cx8.mp3"
-2021-05-06 21:22:25.627  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:22:25.628  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:22:25.683  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:22:25.684  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:22:25.737  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:22:25.738  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:22:25.798  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://files.catbox.moe:443: The target server failed to respond
-2021-05-06 21:22:25.798  INFO 8024 --- [lava-daemon-pool-info-loader-2-thread-1] o.apache.http.impl.execchain.RetryExec   : Retrying request to {s}->https://files.catbox.moe:443
-2021-05-06 21:22:25.851  WARN 8024 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.p.DefaultAudioPlayerManager      : Suspicious exception for loading item https://files.catbox.moe/f71cx8.mp3
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:22:25.851 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:22:25.851 ERROR 8024 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
-
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Connecting to the URL failed.
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:122) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-1.3.76.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.3.76
-  os.arch: amd64
-  os.name: Windows 10
-  os.version: 10.0
-  java.vendor: Oracle Corporation
-  java.version: 11.0.2
-  java.runtime.version: 11.0.2+9
-  java.vm.version: 11.0.2+9
-Caused by: org.apache.http.NoHttpResponseException: files.catbox.moe:443 failed to respond
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar!/:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:113) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.checkStatusCode(PersistentHttpStream.java:62) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainerWithClient(HttpAudioSourceManager.java:130) ~[lavaplayer-1.3.76.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.detectContainer(HttpAudioSourceManager.java:120) ~[lavaplayer-1.3.76.jar!/:na]
-	... 8 common frames omitted
-
-2021-05-06 21:37:37.245  INFO 8024 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59877 -- CloseStatus[code=1006, reason=]
-2021-05-06 21:37:37.245  INFO 8024 --- [XNIO-1 I/O-9] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-05-08 10:43:10.061  INFO 16116 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-FAQV1B7 with PID 16116 (C:\Users\Casey\source\repos\Party-Bot\PartyBot\Lavalink.jar started by Casey in C:\Users\Casey\source\repos\Party-Bot\PartyBot)
+2021-05-08 10:43:10.062  INFO 16116 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2021-05-08 10:43:10.122  WARN 16116 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-05-08 10:43:11.428  WARN 16116 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-05-08 10:43:11.465  INFO 16116 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-05-08 10:43:11.465  INFO 16116 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1355 ms
+2021-05-08 10:43:11.821  WARN 16116 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2021-05-08 10:43:12.112  INFO 16116 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2021-05-08 10:43:12.376  INFO 16116 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2021-05-08 10:43:12.377  WARN 16116 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2021-05-08 10:43:12.648  INFO 16116 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-08 10:43:12.976  INFO 16116 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2021-05-08 10:43:12.988  INFO 16116 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2021-05-08 10:43:13.088  INFO 16116 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2021-05-08 10:43:13.094  INFO 16116 --- [main] lavalink.server.Launcher                 : Started Launcher in 3.65 seconds (JVM running for 4.118)
+2021-05-08 10:43:13.095  INFO 16116 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2021-05-08 10:43:20.518  INFO 16116 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-08 10:43:20.519  INFO 16116 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-08 10:43:20.526  INFO 16116 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-05-08 10:43:20.548  INFO 16116 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51247
+2021-05-08 10:43:20.613  INFO 16116 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:51247
+2021-05-08 10:45:04.283  INFO 16116 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:51247 -- CloseStatus[code=1006, reason=]
+2021-05-08 10:45:04.284  INFO 16116 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-05-08 10:45:12.439  INFO 16116 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51287
+2021-05-08 10:45:12.442  INFO 16116 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:51287
+2021-05-08 10:45:38.520  INFO 16116 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"0241ecb55e87867dfa3323289bb3b75c","event":{"token":"7d29c98feb9803d9","endpoint":"us-west5834.discord.media:443"},"op":"voiceUpdate"}
+2021-05-08 10:45:44.139  INFO 16116 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","op":"stop"}
+2021-05-08 10:45:44.145  INFO 16116 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","op":"destroy"}
+2021-05-08 10:45:46.715  INFO 16116 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"0241ecb55e87867dfa3323289bb3b75c","event":{"token":"ad48cc264ce4c047","endpoint":"us-west5834.discord.media:443"},"op":"voiceUpdate"}
+2021-05-08 10:46:03.228  INFO 16116 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:dont say her name"
+2021-05-08 10:46:04.179  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: dont say her name
+2021-05-08 10:46:04.216  INFO 16116 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAowIAM0ZpcmUgRW1ibGVtIEF3YWtlbmluZyBPU1QgLSAiRG9uJ3Qgc3BlYWsgaGVyIG5hbWUhIgAWVmlkZW8gR2FtZSBTb3VuZHRyYWNrcwAAAAAABzuQAAthRlk1VFBJLWthVQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWFGWTVUUEkta2FVAAd5b3V0dWJlAAAAAAAAAAA=","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
+2021-05-08 11:02:51.356  INFO 16116 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "file:///C:/Users/Casey/source/repos/Party-Bot/PartyBot/temp.mp3"
+2021-05-08 11:02:51.358  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : No matches found
+2021-05-08 11:04:23.657  INFO 16116 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "http://www.filedropper.com/temp"
+2021-05-08 11:04:24.683  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : No matches found
+2021-05-08 11:05:08.124  INFO 16116 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:51287 -- CloseStatus[code=1006, reason=]
+2021-05-08 11:05:08.125  INFO 16116 --- [XNIO-1 I/O-11] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-05-08 11:12:37.505  INFO 16116 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51668
+2021-05-08 11:12:37.508  INFO 16116 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:51668
+2021-05-08 11:12:46.368  INFO 16116 --- [XNIO-1 I/O-16] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"178492f903e075e214dc8defd07314ad","event":{"token":"f367c1d8a1c981a8","endpoint":"us-west8347.discord.media:443"},"op":"voiceUpdate"}
+2021-05-08 11:13:10.417  INFO 16116 --- [XNIO-1 task-10] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:C:\Users\Casey\source\repos\Party-Bot\PartyBot\temp.mp3"
+2021-05-08 11:13:10.967  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: C:\Users\Casey\source\repos\Party-Bot\PartyBot\temp.mp3
+2021-05-08 11:13:10.988  INFO 16116 --- [XNIO-1 I/O-16] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAtAIATUhvdyB0byBtYWtlIGEgTG9iYnkgQm90IHdpdGggYSAqQ1VTVE9NIE5BTUUqIChFdmVyeSBTa2luIGFuZCBFbW90ZSkgKFdPUktJTkcpAA1YTCBHYW1lciBCcm9zAAAAAAAKEiAAC3VEbHFsZi1SQV9RAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dURscWxmLVJBX1EAB3lvdXR1YmUAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
+2021-05-08 11:15:34.846  INFO 16116 --- [XNIO-1 I/O-16] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:51668 -- CloseStatus[code=1006, reason=]
+2021-05-08 11:15:34.846  INFO 16116 --- [XNIO-1 I/O-16] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2021-05-08 11:17:50.163  INFO 16116 --- [XNIO-1 task-12] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51772
+2021-05-08 11:17:50.166  INFO 16116 --- [XNIO-1 task-12] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:51772
+2021-05-08 11:17:56.914  INFO 16116 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"ba420dd82dcecc603e0449fd0ea71133","event":{"token":"53cdc6c7d058a5ee","endpoint":"us-west8347.discord.media:443"},"op":"voiceUpdate"}
+2021-05-08 11:18:01.180  INFO 16116 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Casey\source\repos\Party-Bot\PartyBot\temp.mp3"
+2021-05-08 11:18:01.191  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: loading with filter com.sedmelluq.discord.lavaplayer.natives.ConnectorNativeLibLoader$$Lambda$571/0x00000008012f6738@24c67fec
+2021-05-08 11:18:01.371  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: successfully loaded.
+2021-05-08 11:18:01.372  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: loading with filter null
+2021-05-08 11:18:01.600  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: successfully loaded.
+2021-05-08 11:18:01.604  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
+2021-05-08 11:18:01.621  INFO 16116 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAsAIADVVua25vd24gdGl0bGUADlVua25vd24gYXJ0aXN0AAAAAAABW\u002BgAN0M6XFVzZXJzXENhc2V5XHNvdXJjZVxyZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcC5tcDMAAQA3QzpcVXNlcnNcQ2FzZXlcc291cmNlXHJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wLm1wMwAFbG9jYWwAA21wMwAAAAAAAAAA","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
+2021-05-08 11:24:46.949  INFO 16116 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:51772 -- CloseStatus[code=1006, reason=]
+2021-05-08 11:24:46.949  INFO 16116 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-05-08 11:33:56.241  INFO 16116 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51932
+2021-05-08 11:33:56.244  INFO 16116 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:51932
+2021-05-08 11:34:01.045  INFO 16116 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"e99c6be14c0e48f5c5114d07c1cfa0e1","event":{"token":"46ad3efa07fdefad","endpoint":"us-west8347.discord.media:443"},"op":"voiceUpdate"}
+2021-05-08 11:34:12.294  INFO 16116 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Casey\source\repos\Party-Bot\PartyBot\tempMusic\temp.mp3"
+2021-05-08 11:34:12.296  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
+2021-05-08 11:34:12.313  INFO 16116 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAxAIADVVua25vd24gdGl0bGUADlVua25vd24gYXJ0aXN0AAAAAAABXbAAQUM6XFVzZXJzXENhc2V5XHNvdXJjZVxyZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXHRlbXAubXAzAAEAQUM6XFVzZXJzXENhc2V5XHNvdXJjZVxyZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXHRlbXAubXAzAAVsb2NhbAADbXAzAAAAAAAAAAA=","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
+2021-05-08 11:36:13.351  INFO 16116 --- [XNIO-1 task-18] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Casey\source\repos\Party-Bot\PartyBot\tempMusic\temp.mp3"
+2021-05-08 11:36:13.353  INFO 16116 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
+2021-05-08 11:36:13.363  INFO 16116 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAxAIADVVua25vd24gdGl0bGUADlVua25vd24gYXJ0aXN0AAAAAAABW\u002BgAQUM6XFVzZXJzXENhc2V5XHNvdXJjZVxyZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXHRlbXAubXAzAAEAQUM6XFVzZXJzXENhc2V5XHNvdXJjZVxyZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXHRlbXAubXAzAAVsb2NhbAADbXAzAAAAAAAAAAA=","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
+2021-05-08 11:43:09.717  INFO 16116 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:51932 -- CloseStatus[code=1006, reason=]
+2021-05-08 11:43:09.717  INFO 16116 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.

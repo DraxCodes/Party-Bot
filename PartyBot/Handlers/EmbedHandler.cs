@@ -25,7 +25,7 @@ namespace PartyBot.Handlers
         {
             var embed = await Task.Run(() => new EmbedBuilder()
                 .WithTitle($"ERROR OCCURED FROM - {source}")
-                .WithDescription($"**Error Deaitls**: \n{error}")
+                .WithDescription($"**Error Details**: \n{error}")
                 .WithColor(Color.DarkRed)
                 .WithCurrentTimestamp().Build());
             return embed;

@@ -9,6 +9,9 @@ using Victoria;
 using Victoria.EventArgs;
 using Victoria.Enums;
 using Victoria.Responses.Rest;
+using System.IO;
+using System.Net.Http;
+using System.Net;
 
 namespace PartyBot.Services
 {
@@ -66,10 +69,18 @@ namespace PartyBot.Services
 
                 //Find The Youtube Track the User requested.
                 LavaTrack track;
-
-                var search = Uri.IsWellFormedUriString(query, UriKind.Absolute) ?
+                SearchResponse search;
+                if (query.Contains("catbox"))
+                {
+                    query = await DownloadMP3(query);
+                    search = await _lavaNode.SearchAsync(query);
+                }
+                else
+                {
+                    search = Uri.IsWellFormedUriString(query, UriKind.Absolute) ?
                     await _lavaNode.SearchAsync(query)
                     : await _lavaNode.SearchYouTubeAsync(query);
+                }
 
                 Console.WriteLine(search.ToString());
                 Console.WriteLine(search.LoadStatus.ToString());
@@ -326,7 +337,7 @@ namespace PartyBot.Services
 
             if (!args.Player.Queue.TryDequeue(out var queueable))
             {
-                //await args.Player.TextChannel.SendMessageAsync("Playback Finished.");
+                await args.Player.TextChannel.SendMessageAsync("Playback Finished.");
                 return;
             }
 
@@ -339,6 +350,24 @@ namespace PartyBot.Services
             await args.Player.PlayAsync(track);
             await args.Player.TextChannel.SendMessageAsync(
                 embed: await EmbedHandler.CreateBasicEmbed("Now Playing", $"[{track.Title}]({track.Url})", Color.Blue));
+        }
+
+        //This function will use the System.Net.Http methods to download an mp3 from a direct link and save it to a localpath
+        public async Task<string> DownloadMP3(string query)
+        {
+            string path = Directory.GetCurrentDirectory().Substring(0, Directory.GetCurrentDirectory().LastIndexOf(@"bin\"));
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync(query);
+            response.EnsureSuccessStatusCode();
+
+            WebClient wc = new WebClient();
+            Uri tempurl = new Uri(query);
+            var audio = await wc.DownloadDataTaskAsync(tempurl);
+
+            string localpath = path + @"tempMusic\temp.mp3";
+            File.WriteAllBytes(localpath, audio);
+
+            return localpath;
         }
     }
 }
