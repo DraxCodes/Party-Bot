@@ -14,13 +14,11 @@ namespace PartyBot.Modules
     public class FunModule : ModuleBase<SocketCommandContext>
     {
         [Command("catjam")]
-        public async Task CatJam(SocketMessage arg)
-        {
-            await arg.Channel.SendMessageAsync("https://tenor.com/view/cat-jam-gif-18110512");
-        }
+        public async Task CatJam()
+            => await Context.Channel.SendMessageAsync("https://tenor.com/view/cat-jam-gif-18110512");
 
-        [Command("ratewaifu")]
-        public async Task RateWaifu(SocketMessage arg, string name)
+        [Command("RateWaifu")]
+        public async Task RateWaifu(string name)
         {
             ArrayList vals = new ArrayList();
 
@@ -35,7 +33,7 @@ namespace PartyBot.Modules
             {
                 val = 2;
             }
-            await arg.Channel.SendMessageAsync(name + " is a " + val);
+            await Context.Channel.SendMessageAsync(name + " is a " + val);
         }
     }
 }
