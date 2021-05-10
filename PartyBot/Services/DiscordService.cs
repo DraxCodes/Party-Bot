@@ -16,6 +16,7 @@ namespace PartyBot.Services
         private readonly ServiceProvider _services;
         private readonly LavaNode _lavaNode;
         private readonly LavaLinkAudio _audioService;
+        private readonly JsonService _jsonService;
         private readonly GlobalData _globalData;
 
         public DiscordService()
@@ -25,6 +26,7 @@ namespace PartyBot.Services
             _commandHandler = _services.GetRequiredService<CommandHandler>();
             _lavaNode = _services.GetRequiredService<LavaNode>();
             _globalData = _services.GetRequiredService<GlobalData>();
+            _jsonService = _services.GetRequiredService<JsonService>();
             _audioService = _services.GetRequiredService<LavaLinkAudio>();
 
             SubscribeLavaLinkEvents();
@@ -94,6 +96,7 @@ namespace PartyBot.Services
                 .AddSingleton<LavaNode>()
                 .AddSingleton(new LavaConfig())
                 .AddSingleton<LavaLinkAudio>()
+                .AddSingleton<JsonService>()
                 .AddSingleton<BotService>()
                 .AddSingleton<GlobalData>()
                 .BuildServiceProvider();

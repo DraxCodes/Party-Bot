@@ -10,6 +10,7 @@ namespace PartyBot.Modules
     {
         /* Get our AudioService from DI */
         public LavaLinkAudio AudioService { get; set; }
+        public JsonService JsonService { get; set; }
 
         /* All the below commands are ran via Lambda Expressions to keep this file as neat and closed off as possible. 
               We pass the AudioService Task into the section that would normally require an Embed as that's what all the
