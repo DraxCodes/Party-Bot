@@ -82,10 +82,10 @@ namespace PartyBot.Services
                     : await _lavaNode.SearchYouTubeAsync(query);
                 }
 
-                Console.WriteLine(search.ToString());
-                Console.WriteLine(search.LoadStatus.ToString());
-                Console.WriteLine(search.Exception.Severity);
-                Console.WriteLine(search.Exception.Message);
+                //Console.WriteLine(search.ToString());
+                //Console.WriteLine(search.LoadStatus.ToString());
+                //Console.WriteLine(search.Exception.Severity);
+                //Console.WriteLine(search.Exception.Message);
 
                 //If we couldn't find anything, tell the user.
                 if (search.LoadStatus == LoadStatus.NoMatches)
@@ -98,7 +98,7 @@ namespace PartyBot.Services
                 track = search.Tracks.FirstOrDefault();
 
 
-                Console.WriteLine("after first or default track");
+                //Console.WriteLine("after first or default track");
 
                 //If the Bot is already playing music, or if it is paused but still has music in the playlist, Add the requested track to the queue.
                 if (player.Track != null && player.PlayerState is PlayerState.Playing || player.PlayerState is PlayerState.Paused)
@@ -108,7 +108,12 @@ namespace PartyBot.Services
                     return await EmbedHandler.CreateBasicEmbed("Music", $"{track.Title} has been added to queue.", Color.Blue);
                 }
 
-                Console.WriteLine("Right before player");
+                /*
+                 * I think that here we can probably do an if(player.Track.)
+                 */
+
+
+                //Console.WriteLine("Right before player");
 
                 //Player was not playing anything, so lets play the requested track.
                 await player.PlayAsync(track);
@@ -123,6 +128,8 @@ namespace PartyBot.Services
             }
 
         }
+
+        
 
         /*This is ran when a user uses the command Leave.
             Task Returns an Embed which is used in the command call. */
