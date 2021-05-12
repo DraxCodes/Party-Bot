@@ -18,6 +18,8 @@ namespace PartyBot.Services
     public sealed class LavaLinkAudio
     {
         private readonly LavaNode _lavaNode;
+        private readonly string path = Directory.GetCurrentDirectory().Substring(0, 
+            Directory.GetCurrentDirectory().LastIndexOf(@"bin\"));
 
         public LavaLinkAudio(LavaNode lavaNode)
             => _lavaNode = lavaNode;
@@ -232,6 +234,20 @@ namespace PartyBot.Services
                         var currentTrack = player.Track;
                         /* Skip the current song. */
                         await player.SkipAsync();
+
+                        if (currentTrack.Url.Contains(@"\tempMusic"))
+                        {
+                            try
+                            {
+                                FileSystemInfo fileInfo = new DirectoryInfo(path + @"\tempMusic").GetFileSystemInfos().OrderBy(fi => fi.CreationTime).First();
+                                fileInfo.Delete();
+                            }
+                            catch (Exception ex)
+                            {
+                                await player.TextChannel.SendMessageAsync(ex.Message);
+                            }
+                        }
+
                         await LoggingService.LogInformationAsync("Music", $"Bot skipped: {currentTrack.Title}");
                         return await EmbedHandler.CreateBasicEmbed("Music Skip", $"I have successfully skipped {currentTrack.Title}", Color.Blue);
                     }
@@ -342,16 +358,22 @@ namespace PartyBot.Services
                 return;
             }
 
-            if (!args.Player.Queue.TryDequeue(out var queueable))
+            if (args.Track.Url.Contains(@"\tempMusic"))
             {
                 try
                 {
-                    File.Delete(queueable.Url);
+                    FileSystemInfo fileInfo = new DirectoryInfo(path + @"\tempMusic").GetFileSystemInfos().OrderBy(fi => fi.CreationTime).First();
+                    fileInfo.Delete();
                 }
                 catch (Exception ex)
                 {
                     await args.Player.TextChannel.SendMessageAsync(ex.Message);
                 }
+            }
+
+            if (!args.Player.Queue.TryDequeue(out var queueable))
+            {
+                
                 await args.Player.TextChannel.SendMessageAsync("Playback Finished.");
                 return;
             }
@@ -363,6 +385,9 @@ namespace PartyBot.Services
             }
 
             await args.Player.PlayAsync(track);
+
+
+
             await args.Player.TextChannel.SendMessageAsync(
                 embed: await EmbedHandler.CreateBasicEmbed("Now Playing", $"[{track.Title}]({track.Url})", Color.Blue));
         }
@@ -370,7 +395,6 @@ namespace PartyBot.Services
         //This function will use the System.Net.Http methods to download an mp3 from a direct link and save it to a localpath
         public async Task<string> DownloadMP3(string query)
         {
-            string path = Directory.GetCurrentDirectory().Substring(0, Directory.GetCurrentDirectory().LastIndexOf(@"bin\"));
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync(query);
             response.EnsureSuccessStatusCode();
