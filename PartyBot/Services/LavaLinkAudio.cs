@@ -371,7 +371,9 @@ namespace PartyBot.Services
             Uri tempurl = new Uri(query);
             var audio = await wc.DownloadDataTaskAsync(tempurl);
 
-            string localpath = path + @"tempMusic\temp.mp3";
+            string cutString = query.Substring(query.LastIndexOf(".moe")+5);
+
+            string localpath = path + @"tempMusic\"+cutString;
             File.WriteAllBytes(localpath, audio);
 
             return localpath;
