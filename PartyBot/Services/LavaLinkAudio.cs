@@ -344,6 +344,14 @@ namespace PartyBot.Services
 
             if (!args.Player.Queue.TryDequeue(out var queueable))
             {
+                try
+                {
+                    File.Delete(queueable.Url);
+                }
+                catch (Exception ex)
+                {
+                    await args.Player.TextChannel.SendMessageAsync(ex.Message);
+                }
                 await args.Player.TextChannel.SendMessageAsync("Playback Finished.");
                 return;
             }
