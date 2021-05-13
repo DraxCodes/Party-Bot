@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Net;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using PartyBot.Services;
 
 public sealed class JsonService
 {
@@ -52,18 +53,18 @@ public sealed class JsonService
 
 
     //asynchronously converts the Json file to a GameData object
-    public async Task<GameData> ConvertJson(string filePath)
+    public async Task<List<SongData>> ConvertJson(string filePath)
     {
         string contents = File.ReadAllText(filePath);
-        GameData data = JsonConvert.DeserializeObject<GameData>(contents);
+        var data = JsonConvert.DeserializeObject<List<SongData>>(contents);
         return data;
     }
 
     //asynchronously converts the Json file to a GameData object
-    public async Task<List<GameData>> ConvertJson(FileInfo info)
+    public async Task<List<SongData>> ConvertJson(FileInfo info)
     {
         string contents = File.ReadAllText(info.FullName);
-        var data = JsonConvert.DeserializeObject<List<GameData>>(contents);
+        var data = JsonConvert.DeserializeObject<List<SongData>>(contents);
         return data;
     }
 
@@ -74,5 +75,14 @@ public sealed class JsonService
          .OrderByDescending(f => f.LastWriteTime)
          .First();
         return myFile;
+    }
+
+    public async Task<string> GetJson(string name)
+    {
+        string files = path + @"LocalJson\";
+        if (File.Exists(files + name))
+            return files + name;
+        await LoggingService.LogInformationAsync("Json", "Could not find a file with that specified name");
+        return "File not found";
     }
 }

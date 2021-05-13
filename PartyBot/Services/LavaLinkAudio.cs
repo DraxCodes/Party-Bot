@@ -411,7 +411,7 @@ namespace PartyBot.Services
             return localpath;
         }
 
-        public async Task<Embed> GetSongsFromData(SocketGuildUser user, IGuild guild, List<GameData> data)
+        public async Task<Embed> queueSongsFromData(SocketGuildUser user, IGuild guild, List<SongData> data)
         {
             //Check If User Is Connected To Voice Cahnnel.
             if (user.VoiceChannel == null)
@@ -428,24 +428,38 @@ namespace PartyBot.Services
             var player = _lavaNode.GetPlayer(guild);
             string MP3Link;
             LavaTrack toQueue;
-            for (int i = 0; i< data.Count; i++)
-                foreach (SongData song in data[i].songs){
-                    try
-                    {
-                        MP3Link = await DownloadMP3(song.urls.catbox._0);
-                        var search = await _lavaNode.SearchAsync(MP3Link);
-                        LavaTrack track = search.Tracks.FirstOrDefault();
-                        toQueue = CatboxTrack(track, song.name, song.artist);
-                        //If the Bot is already playing music, or if it is paused but still has music in the playlist, Add the requested track to the queue.
-                        player.Queue.Enqueue(toQueue);
-                        await LoggingService.LogInformationAsync("Music", $"{track.Title} has been added to the music queue.");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
+            bool playFirst = true;
 
+            if (player.Track != null && player.PlayerState is PlayerState.Playing || player.PlayerState is PlayerState.Paused)
+                playFirst = false;
+
+            if (playFirst)
+            {
+                try
+                {
+                    SongData song = data[0];
+                    toQueue = await DownloadAndConvert(song);
+                    await player.PlayAsync(toQueue);
+                    return await EmbedHandler.CreateBasicEmbed("Music", $"{player.Track.Title} now playing.", Color.Blue);
                 }
+                catch (Exception ex)
+                {
+                    await LoggingService.LogInformationAsync(ex.ToString(), ex.Message);
+                }
+            }
+            foreach (SongData song in data.Skip(1))
+                try
+                {
+                    toQueue = await DownloadAndConvert(song);
+                    //If the Bot is already playing music, or if it is paused but still has music in the playlist, Add the requested track to the queue.
+                    player.Queue.Enqueue(toQueue);
+                    await LoggingService.LogInformationAsync("Music", $"{toQueue.Title} has been added to the music queue.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
             return await EmbedHandler.CreateBasicEmbed("Music", "All songs from latest Json have been added to queue.", Color.Blue);
         }
 
@@ -455,6 +469,14 @@ namespace PartyBot.Services
             LavaTrack toReturn = new LavaTrack(track.Hash, track.Id,
                 songName, author, track.Url, track.Position, track.Duration.Ticks, track.CanSeek, track.IsStream);
             return toReturn;
+        }
+
+        public async Task<LavaTrack> DownloadAndConvert(SongData song)
+        {
+            string MP3Link = await DownloadMP3(song.urls.catbox._0);
+            var search = await _lavaNode.SearchAsync(MP3Link);
+            LavaTrack track = search.Tracks.FirstOrDefault();
+            return CatboxTrack(track, song.name, song.artist);
         }
     }
 }
