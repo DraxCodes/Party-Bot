@@ -2,6 +2,7 @@
 using Discord.Commands;
 using Discord.WebSocket;
 using PartyBot.Services;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace PartyBot.Modules
@@ -51,5 +52,13 @@ namespace PartyBot.Modules
         [Command("Resume")]
         public async Task Resume()
             => await ReplyAsync(await AudioService.ResumeAsync(Context.Guild));
+
+        [Command("Playlist")]
+        public async Task CreatePlaylist()
+        {
+            FileInfo info = JsonService.GetLastJson();
+            var data = await JsonService.ConvertJson(info);
+            await ReplyAsync(embed: await AudioService.GetSongsFromData(Context.User as SocketGuildUser, Context.Guild, data));
+        }
     }
 }
