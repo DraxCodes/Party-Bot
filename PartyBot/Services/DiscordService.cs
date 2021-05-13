@@ -4,8 +4,11 @@ using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
 using PartyBot.Handlers;
 using System;
+using System.IO;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Victoria;
+
 
 namespace PartyBot.Services
 {
@@ -36,6 +39,17 @@ namespace PartyBot.Services
         /* Initialize the Discord Client. */
         public async Task InitializeAsync()
         {
+            string jarPath = Directory.GetCurrentDirectory().Substring(0, Directory.GetCurrentDirectory().LastIndexOf(@"bin\"));
+            Console.WriteLine(jarPath);
+            
+            Process clientProcess = new Process();
+            clientProcess.StartInfo.FileName = "java";
+            clientProcess.StartInfo.Arguments = @"-jar " + jarPath + "Lavalink.jar";
+            clientProcess.Start();
+            clientProcess.WaitForExit();
+            int code = clientProcess.ExitCode;
+            
+
             await InitializeGlobalDataAsync();
 
             await _client.LoginAsync(TokenType.Bot, GlobalData.Config.DiscordToken);

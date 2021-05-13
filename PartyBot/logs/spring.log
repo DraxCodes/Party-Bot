@@ -1,166 +1,24 @@
-2021-05-12 10:42:02.071  INFO 21040 --- [main] lavalink.server.Launcher                 : 
-
-[32m       .  [31m _                  _ _       _    [32m__ _ _
-[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
-[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
-[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
-[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
-[0m    =========================================[32m/_/_/_/[0m
-
-	Version:        2ac6bf4e0dcab9ba7493b0494316b8bee698913d-SNAPSHOT
-	Build:          1232
-	Build time:     20.04.2021 07:05:21 UTC
-	Branch          master
-	Commit:         2ac6bf4
-	Commit time:    20.04.2021 07:02:46 UTC
-	JVM:            15.0.1
-	Lavaplayer      1.3.76
-
-2021-05-12 10:42:02.108  INFO 21040 --- [main] o.s.boot.SpringApplication               : 
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.1.8.RELEASE)
-
-
-2021-05-12 10:42:02.174  INFO 21040 --- [main] lavalink.server.Launcher                 : Starting Launcher on Po with PID 21040 (C:\Users\Ryan\source\repos\Party-Bot\PartyBot\Lavalink.jar started by Ryan in C:\Users\Ryan\source\repos\Party-Bot\PartyBot)
-2021-05-12 10:42:02.175  INFO 21040 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
-2021-05-12 10:42:02.216  WARN 21040 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2021-05-12 10:42:03.021  WARN 21040 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-05-12 10:42:03.037  INFO 21040 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-05-12 10:42:03.038  INFO 21040 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 829 ms
-2021-05-12 10:42:03.262  WARN 21040 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2021-05-12 10:42:03.470  INFO 21040 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2021-05-12 10:42:03.628  INFO 21040 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
-2021-05-12 10:42:03.628  WARN 21040 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
-2021-05-12 10:42:03.808  INFO 21040 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-05-12 10:42:03.989  INFO 21040 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
-2021-05-12 10:42:03.997  INFO 21040 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
-2021-05-12 10:42:04.035  INFO 21040 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
-2021-05-12 10:42:04.037  INFO 21040 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.257 seconds (JVM running for 2.548)
-2021-05-12 10:42:04.038  INFO 21040 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
-2021-05-12 10:42:14.955  INFO 21040 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-05-12 10:42:14.956  INFO 21040 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-05-12 10:42:14.961  INFO 21040 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2021-05-12 10:42:14.977  INFO 21040 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60132
-2021-05-12 10:42:15.026  INFO 21040 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60132
-2021-05-12 10:42:28.850  INFO 21040 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"7f34bbfbe80efac649542381f37150c5","event":{"token":"a051b72720feddb0","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 10:42:57.686  INFO 21040 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60132 -- CloseStatus[code=1006, reason=]
-2021-05-12 10:42:57.687  INFO 21040 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 10:44:28.786  INFO 21040 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60139
-2021-05-12 10:44:28.789  INFO 21040 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60139
-2021-05-12 10:44:42.265  INFO 21040 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"21d163dbd1b6a0f9c3a3950ba56a518b","event":{"token":"a051b72720feddb0","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 10:45:11.047  INFO 21040 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60139 -- CloseStatus[code=1006, reason=]
-2021-05-12 10:45:11.047  INFO 21040 --- [XNIO-1 I/O-7] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 10:45:16.779  INFO 21040 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60147
-2021-05-12 10:45:16.781  INFO 21040 --- [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60147
-2021-05-12 10:45:19.986  INFO 21040 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"3b365904e9da7164dccec31e13ede6a0","event":{"token":"a051b72720feddb0","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 10:45:36.441  INFO 21040 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60147 -- CloseStatus[code=1006, reason=]
-2021-05-12 10:45:36.441  INFO 21040 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 10:46:50.183  INFO 21040 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60157
-2021-05-12 10:46:50.186  INFO 21040 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60157
-2021-05-12 10:46:55.705  INFO 21040 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"d9d8692991a5bc2603affb808fe7fe90","event":{"token":"a051b72720feddb0","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 10:47:16.145  INFO 21040 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60157 -- CloseStatus[code=1006, reason=]
-2021-05-12 10:47:16.145  INFO 21040 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 10:47:50.809  INFO 21040 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60163
-2021-05-12 10:47:50.811  INFO 21040 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60163
-2021-05-12 10:47:53.972  INFO 21040 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"03f9d9277aa0f79ab88313542988a250","event":{"token":"a051b72720feddb0","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 10:48:29.423  INFO 21040 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60163 -- CloseStatus[code=1006, reason=]
-2021-05-12 10:48:29.423  INFO 21040 --- [XNIO-1 I/O-7] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 10:48:35.296  INFO 21040 --- [XNIO-1 task-6] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60170
-2021-05-12 10:48:35.298  INFO 21040 --- [XNIO-1 task-6] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60170
-2021-05-12 10:48:37.805  INFO 21040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"a78b76d930f87d98e1256ced17ceb99c","event":{"token":"a051b72720feddb0","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 10:48:43.075  INFO 21040 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic/f71cx8.mp3"
-2021-05-12 10:48:43.083  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: loading with filter com.sedmelluq.discord.lavaplayer.natives.ConnectorNativeLibLoader$$Lambda$556/0x00000008011bbad8@3a09e335
-2021-05-12 10:48:43.092  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: successfully loaded.
-2021-05-12 10:48:43.092  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: loading with filter null
-2021-05-12 10:48:43.115  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: successfully loaded.
-2021-05-12 10:48:43.120  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
-2021-05-12 10:48:43.140  INFO 21040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAxgIADVVua25vd24gdGl0bGUADlVua25vd24gYXJ0aXN0AAAAAAABW\u002BgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWMvZjcxY3g4Lm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljL2Y3MWN4OC5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 10:50:03.837  INFO 21040 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic/usggml.mp3"
-2021-05-12 10:50:03.841  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
-2021-05-12 10:50:12.157  INFO 21040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAxgIADVVua25vd24gdGl0bGUADlVua25vd24gYXJ0aXN0AAAAAAABXTgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWMvdXNnZ21sLm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljL3VzZ2dtbC5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 10:50:27.010  INFO 21040 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic/ng52ip.mp3"
-2021-05-12 10:50:27.012  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
-2021-05-12 10:51:10.303  INFO 21040 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic/po6mdk.mp3"
-2021-05-12 10:51:10.308  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
-2021-05-12 10:51:41.501  INFO 21040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAxgIADVVua25vd24gdGl0bGUADlVua25vd24gYXJ0aXN0AAAAAAABNCgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWMvbmc1MmlwLm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljL25nNTJpcC5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 10:53:00.326  INFO 21040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAxgIADVVua25vd24gdGl0bGUADlVua25vd24gYXJ0aXN0AAAAAAABVBoAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWMvcG82bWRrLm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljL3BvNm1kay5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 10:53:49.414  INFO 21040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60170 -- CloseStatus[code=1006, reason=]
-2021-05-12 10:53:49.414  INFO 21040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
-2021-05-12 11:00:20.835  INFO 21040 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60294
-2021-05-12 11:00:20.837  INFO 21040 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60294
-2021-05-12 11:00:41.707  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"e2c4cf858c3312bd870fc78ad658c039","event":{"token":"cd8405965228ae47","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 11:00:48.884  INFO 21040 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\po6mdk.mp3"
-2021-05-12 11:00:48.885  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
-2021-05-12 11:00:48.896  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAxgIADVVua25vd24gdGl0bGUADlVua25vd24gYXJ0aXN0AAAAAAABVBoAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWNccG82bWRrLm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXHBvNm1kay5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:01:37.406  INFO 21040 --- [XNIO-1 task-18] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\47u6u8.mp3"
-2021-05-12 11:01:37.409  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track [SubsPlease] Shingeki no Kyojin (The Final Season) - 60 (720p) [952098AA]
-2021-05-12 11:02:15.912  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAABAgIASVtTdWJzUGxlYXNlXSBTaGluZ2VraSBubyBLeW9qaW4gKFRoZSBGaW5hbCBTZWFzb24pIC0gNjAgKDcyMHApIFs5NTIwOThBQV0ADlVua25vd24gYXJ0aXN0AAAAAAABWdgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWNcNDd1NnU4Lm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXDQ3dTZ1OC5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:03:25.506  INFO 21040 --- [XNIO-1 task-20] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\j7lgvk.mp3"
-2021-05-12 11:03:25.508  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track [SubsPlease] Shingeki no Kyojin (The Final Season) - 61 (720p) [54EEE62D]
-2021-05-12 11:03:44.404  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAABAgIASVtTdWJzUGxlYXNlXSBTaGluZ2VraSBubyBLeW9qaW4gKFRoZSBGaW5hbCBTZWFzb24pIC0gNjEgKDcyMHApIFs1NEVFRTYyRF0ADlVua25vd24gYXJ0aXN0AAAAAAABUZgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWNcajdsZ3ZrLm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXGo3bGd2ay5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:05:20.964  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60294 -- CloseStatus[code=1006, reason=]
-2021-05-12 11:05:20.965  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 11:06:05.792  INFO 21040 --- [XNIO-1 task-22] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60322
-2021-05-12 11:06:05.795  INFO 21040 --- [XNIO-1 task-22] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60322
-2021-05-12 11:06:09.463  INFO 21040 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"166f3c9b3371bd56b740d51b063e979e","event":{"token":"cd8405965228ae47","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 11:06:12.404  INFO 21040 --- [XNIO-1 task-23] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:args.Player.Track.Url"
-2021-05-12 11:06:13.108  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: args.Player.Track.Url
-2021-05-12 11:06:13.129  INFO 21040 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAlAIAKlRyYWNraW5nIGNhbXBhaWducyB3aXRoIFVSTCBCdWlsZGVyICg0OjM3KQAQR29vZ2xlIEFuYWx5dGljcwAAAAAABD3wAAtwTlJnVXE1c0RoYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXBOUmdVcTVzRGhjAAd5b3V0dWJlAAAAAAAAAAA=","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:06:37.189  INFO 21040 --- [XNIO-1 task-25] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\47u6u8.mp3"
-2021-05-12 11:06:37.192  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track [SubsPlease] Shingeki no Kyojin (The Final Season) - 60 (720p) [952098AA]
-2021-05-12 11:06:38.965  INFO 21040 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAABAgIASVtTdWJzUGxlYXNlXSBTaGluZ2VraSBubyBLeW9qaW4gKFRoZSBGaW5hbCBTZWFzb24pIC0gNjAgKDcyMHApIFs5NTIwOThBQV0ADlVua25vd24gYXJ0aXN0AAAAAAABWdgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWNcNDd1NnU4Lm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXDQ3dTZ1OC5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:07:18.275  INFO 21040 --- [XNIO-1 task-27] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\rwq1fm.mp3"
-2021-05-12 11:07:18.279  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track AMQ mp3(c) convert
-2021-05-12 11:08:59.457  INFO 21040 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60322 -- CloseStatus[code=1006, reason=]
-2021-05-12 11:08:59.458  INFO 21040 --- [XNIO-1 I/O-10] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 11:10:40.474  INFO 21040 --- [XNIO-1 task-29] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60370
-2021-05-12 11:10:40.476  INFO 21040 --- [XNIO-1 task-29] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60370
-2021-05-12 11:10:46.583  INFO 21040 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60370 -- CloseStatus[code=1006, reason=]
-2021-05-12 11:10:46.583  INFO 21040 --- [XNIO-1 I/O-10] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 11:15:31.941  INFO 21040 --- [XNIO-1 task-30] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60384
-2021-05-12 11:15:31.944  INFO 21040 --- [XNIO-1 task-30] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60384
-2021-05-12 11:15:54.576  INFO 21040 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"18fb0ff3f6abe5bb88f0fa7ed22a8dc8","event":{"token":"c3c9a4f2cff269f3","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 11:16:16.742  INFO 21040 --- [XNIO-1 task-31] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\j7lgvk.mp3"
-2021-05-12 11:16:16.743  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track [SubsPlease] Shingeki no Kyojin (The Final Season) - 61 (720p) [54EEE62D]
-2021-05-12 11:16:16.755  INFO 21040 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAABAgIASVtTdWJzUGxlYXNlXSBTaGluZ2VraSBubyBLeW9qaW4gKFRoZSBGaW5hbCBTZWFzb24pIC0gNjEgKDcyMHApIFs1NEVFRTYyRF0ADlVua25vd24gYXJ0aXN0AAAAAAABUZgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWNcajdsZ3ZrLm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXGo3bGd2ay5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:19:38.806  INFO 21040 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60384 -- CloseStatus[code=1006, reason=]
-2021-05-12 11:19:38.806  INFO 21040 --- [XNIO-1 I/O-12] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 11:23:45.713  INFO 21040 --- [XNIO-1 task-33] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60416
-2021-05-12 11:23:45.715  INFO 21040 --- [XNIO-1 task-33] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60416
-2021-05-12 11:23:48.788  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"d312f667d0525671403a64b20ecea450","event":{"token":"833ed57b9c5a4f53","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 11:23:54.922  INFO 21040 --- [XNIO-1 task-34] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:golden kamuy op"
-2021-05-12 11:23:55.473  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: golden kamuy op
-2021-05-12 11:23:55.489  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAkwIAL0dvbGRlbiBLYW11eSDigJMgT3BlbmluZyBUaGVtZSDigJMgV2luZGluZyBSb2FkAApGdW5pbWF0aW9uAAAAAAABX5AAC1FhaEZpakVkM2hZAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9UWFoRmlqRWQzaFkAB3lvdXR1YmUAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:24:16.396  INFO 21040 --- [XNIO-1 task-36] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\j7lgvk.mp3"
-2021-05-12 11:24:16.402  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track [SubsPlease] Shingeki no Kyojin (The Final Season) - 61 (720p) [54EEE62D]
-2021-05-12 11:24:21.508  INFO 21040 --- [XNIO-1 task-38] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\47u6u8.mp3"
-2021-05-12 11:24:21.512  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track [SubsPlease] Shingeki no Kyojin (The Final Season) - 60 (720p) [952098AA]
-2021-05-12 11:24:32.379  INFO 21040 --- [XNIO-1 task-40] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:UNION!! 765 MILLION ALLSTARS"
-2021-05-12 11:24:32.802  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: UNION!! 765 MILLION ALLSTARS
-2021-05-12 11:25:20.182  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAABAgIASVtTdWJzUGxlYXNlXSBTaGluZ2VraSBubyBLeW9qaW4gKFRoZSBGaW5hbCBTZWFzb24pIC0gNjEgKDcyMHApIFs1NEVFRTYyRF0ADlVua25vd24gYXJ0aXN0AAAAAAABUZgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWNcajdsZ3ZrLm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXGo3bGd2ay5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:28:45.704  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60416 -- CloseStatus[code=1006, reason=]
-2021-05-12 11:28:45.705  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-05-12 11:30:33.307  INFO 21040 --- [XNIO-1 task-42] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60464
-2021-05-12 11:30:33.310  INFO 21040 --- [XNIO-1 task-42] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60464
-2021-05-12 11:30:35.542  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"b45bae3a68cdc8578b7dbb9ddd1ec27b","event":{"token":"449d45b75787a3ec","endpoint":"us-west3191.discord.media:443"},"op":"voiceUpdate"}
-2021-05-12 11:30:41.667  INFO 21040 --- [XNIO-1 task-43] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\j7lgvk.mp3"
-2021-05-12 11:30:41.668  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track [SubsPlease] Shingeki no Kyojin (The Final Season) - 61 (720p) [54EEE62D]
-2021-05-12 11:30:41.681  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAABAgIASVtTdWJzUGxlYXNlXSBTaGluZ2VraSBubyBLeW9qaW4gKFRoZSBGaW5hbCBTZWFzb24pIC0gNjEgKDcyMHApIFs1NEVFRTYyRF0ADlVua25vd24gYXJ0aXN0AAAAAAABUZgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWNcajdsZ3ZrLm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXGo3bGd2ay5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:30:52.764  INFO 21040 --- [XNIO-1 task-45] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:UNION!! 765 Million ALLSTARS"
-2021-05-12 11:30:53.310  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: UNION!! 765 Million ALLSTARS
-2021-05-12 11:31:12.053  INFO 21040 --- [XNIO-1 task-47] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\rwq1fm.mp3"
-2021-05-12 11:31:12.056  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track AMQ mp3(c) convert
-2021-05-12 11:31:15.868  INFO 21040 --- [XNIO-1 task-49] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\w4mlq2.mp3"
-2021-05-12 11:31:15.870  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
-2021-05-12 11:31:34.294  INFO 21040 --- [XNIO-1 task-51] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "C:\Users\Ryan\Source\Repos\Party-Bot\PartyBot\tempMusic\mo9mwe.mp3"
-2021-05-12 11:31:34.297  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Unknown title
-2021-05-12 11:32:08.063  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAhAIAH1VuaW9uISEgLSA3NjUgTUlMTElJT04gQUxMU1RBUlMAC1RoZSBJTWFTIFRWAAAAAAAE/VgAC2Qwc0NydzF1a0M0AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZDBzQ3J3MXVrQzQAB3lvdXR1YmUAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:32:31.516  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAywIAEkFNUSBtcDMoYykgY29udmVydAAOVW5rbm93biBhcnRpc3QAAAAAAAEPCABCQzpcVXNlcnNcUnlhblxTb3VyY2VcUmVwb3NcUGFydHktQm90XFBhcnR5Qm90XHRlbXBNdXNpY1xyd3ExZm0ubXAzAAEAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWNccndxMWZtLm1wMwAFbG9jYWwAA21wMwAAAAAAAAAA","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:33:40.830  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAxgIADVVua25vd24gdGl0bGUADlVua25vd24gYXJ0aXN0AAAAAAABnVgAQkM6XFVzZXJzXFJ5YW5cU291cmNlXFJlcG9zXFBhcnR5LUJvdFxQYXJ0eUJvdFx0ZW1wTXVzaWNcdzRtbHEyLm1wMwABAEJDOlxVc2Vyc1xSeWFuXFNvdXJjZVxSZXBvc1xQYXJ0eS1Cb3RcUGFydHlCb3RcdGVtcE11c2ljXHc0bWxxMi5tcDMABWxvY2FsAANtcDMAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
-2021-05-12 11:35:13.811  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60464 -- CloseStatus[code=1006, reason=]
-2021-05-12 11:35:13.811  INFO 21040 --- [XNIO-1 I/O-8] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2021-05-13 12:53:57.680  INFO 21040 --- [XNIO-1 task-53] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:53711
+2021-05-13 12:53:57.738  INFO 21040 --- [XNIO-1 task-53] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:53711
+2021-05-13 12:54:09.228  INFO 21040 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:53711 -- CloseStatus[code=1006, reason=]
+2021-05-13 12:54:09.229  INFO 21040 --- [XNIO-1 I/O-11] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-05-13 12:54:35.588  INFO 21040 --- [XNIO-1 task-54] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:53714
+2021-05-13 12:54:35.590  INFO 21040 --- [XNIO-1 task-54] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:53714
+2021-05-13 12:54:36.387  INFO 21040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:53714 -- CloseStatus[code=1006, reason=]
+2021-05-13 12:54:36.387  INFO 21040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-05-13 12:55:06.552  INFO 21040 --- [XNIO-1 task-55] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:53717
+2021-05-13 12:55:06.554  INFO 21040 --- [XNIO-1 task-55] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:53717
+2021-05-13 12:55:10.679  INFO 21040 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:53717 -- CloseStatus[code=1006, reason=]
+2021-05-13 12:55:10.680  INFO 21040 --- [XNIO-1 I/O-5] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-05-13 12:55:16.739  INFO 21040 --- [XNIO-1 task-56] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:53721
+2021-05-13 12:55:16.745  INFO 21040 --- [XNIO-1 task-56] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:53721
+2021-05-13 12:55:56.798  INFO 21040 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:53721 -- CloseStatus[code=1006, reason=]
+2021-05-13 12:55:56.798  INFO 21040 --- [XNIO-1 I/O-9] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-05-13 12:56:11.677  INFO 21040 --- [XNIO-1 task-57] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:53802
+2021-05-13 12:56:11.680  INFO 21040 --- [XNIO-1 task-57] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:53802
+2021-05-13 12:56:35.089  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"guildId":"834202766561509437","sessionId":"2c9a92ddcf5df8b9080e40bfd0f0eb45","event":{"token":"7a1cb14e300e8316","endpoint":"us-west1222.discord.media:443"},"op":"voiceUpdate"}
+2021-05-13 12:56:44.220  INFO 21040 --- [XNIO-1 task-58] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:UNION!! 765 MIllion allstars"
+2021-05-13 12:56:44.780  INFO 21040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: UNION!! 765 MIllion allstars
+2021-05-13 12:56:44.793  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"endTime":0,"track":"QAAAhAIAH1VuaW9uISEgLSA3NjUgTUlMTElJT04gQUxMU1RBUlMAC1RoZSBJTWFTIFRWAAAAAAAE/VgAC2Qwc0NydzF1a0M0AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZDBzQ3J3MXVrQzQAB3lvdXR1YmUAAAAAAAAAAA==","noReplace":false,"startTime":0,"guildId":"834202766561509437","op":"play"}
+2021-05-13 12:59:18.353  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:53802 -- CloseStatus[code=1006, reason=]
+2021-05-13 12:59:18.353  INFO 21040 --- [XNIO-1 I/O-6] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
