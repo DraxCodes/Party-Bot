@@ -6,3 +6,5 @@ PartyBot/bin/*
 /PartyBot/LavaLink/*
 /PartyBot/Properties/*
 PartyBot/PartyBot.csproj.user
+PartyBot/logs
+PartyBot/tempMusic
