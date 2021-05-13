@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameData
 {
@@ -7,17 +8,12 @@ public class GameData
     //An array which represents each song that played,
     //each individual object holds all information recorded
     //in the lobby.
-    public SongData[] songs { get; set; }
+    public List<SongData> songs { get; set; }
 
-    public ArrayList arrayList { get; set; }
 
-    public GameData(SongData[] s)
+    public GameData(List<SongData> s)
     {
         songs = s;
-    }
-    public GameData()
-    {
-        arrayList = new ArrayList();
     }
 }
 
@@ -43,8 +39,8 @@ public class SongData
     //length of the video
     public float videoLength { get; set; }
     //all players in the lobby or other players?
-    public Player[] players { get; set; }
-    public Fromlist[] fromList { get; set; }
+    public List<Player> players { get; set; }
+    public List<Fromlist> fromList { get; set; }
     public bool correct { get; set; }
     //answer typed by the player
     public string selfAnswer { get; set; }

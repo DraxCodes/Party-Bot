@@ -6,7 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
-using System.Text.Json;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 public sealed class JsonService
 {
@@ -53,16 +54,16 @@ public sealed class JsonService
     //asynchronously converts the Json file to a GameData object
     public async Task<GameData> ConvertJson(string filePath)
     {
-        using FileStream stream = File.OpenRead(filePath);
-        GameData data = await JsonSerializer.DeserializeAsync<GameData>(stream);
+        string contents = File.ReadAllText(filePath);
+        GameData data = JsonConvert.DeserializeObject<GameData>(contents);
         return data;
     }
 
     //asynchronously converts the Json file to a GameData object
-    public async Task<GameData> ConvertJson(FileInfo info)
+    public async Task<List<GameData>> ConvertJson(FileInfo info)
     {
-        using FileStream stream = File.OpenRead(info.FullName);
-        GameData data = await JsonSerializer.DeserializeAsync<GameData>(stream);
+        string contents = File.ReadAllText(info.FullName);
+        var data = JsonConvert.DeserializeObject<List<GameData>>(contents);
         return data;
     }
 
