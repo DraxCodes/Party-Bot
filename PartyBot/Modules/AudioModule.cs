@@ -55,17 +55,11 @@ namespace PartyBot.Modules
 
         [Command("Playlist")]
         public async Task CreatePlaylist()
-        {
-            FileInfo info = JsonService.GetLastJson();
-            var data = await JsonService.ConvertJson(info);
-            await ReplyAsync(embed: await AudioService.queueSongsFromData(Context.User as SocketGuildUser, Context.Guild, data));
-        }
+            => await ReplyAsync(embed: await AudioService.queueSongsFromData(Context.User as SocketGuildUser, 
+                Context.Guild, await JsonService.ConvertJson(JsonService.GetLastJson())));
         [Command("Playlist")]
         public async Task CreatePlaylist(string file)
-        {
-            string result = await JsonService.GetJson(file);
-            var data = await JsonService.ConvertJson(result);
-            await ReplyAsync(embed: await AudioService.queueSongsFromData(Context.User as SocketGuildUser, Context.Guild, data));
-        }
+            => await ReplyAsync(embed: await AudioService.queueSongsFromData(Context.User as SocketGuildUser, 
+                Context.Guild, await JsonService.ConvertJson(await JsonService.GetJson(file))));
     }
 }
