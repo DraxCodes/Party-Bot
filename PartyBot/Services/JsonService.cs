@@ -15,6 +15,11 @@ public sealed class JsonService
     readonly string path = Directory.GetCurrentDirectory().Substring(0,
         Directory.GetCurrentDirectory().LastIndexOf(@"bin\"));
 
+    public async Task addRule(string s)
+    {
+
+    }
+
     public async Task GetJsonFiles(ISocketMessageChannel channel, int i)
     {
         var messages = await channel.GetMessagesAsync(i).Flatten().ToArrayAsync();
@@ -56,7 +61,7 @@ public sealed class JsonService
     public async Task<List<SongData>> ConvertJson(string filePath)
     {
         string contents = File.ReadAllText(filePath);
-        var data = JsonConvert.DeserializeObject<List<SongData>>(contents);
+        var data = await Task.Run(() =>JsonConvert.DeserializeObject<List<SongData>>(contents));
         return data;
     }
 
@@ -64,7 +69,7 @@ public sealed class JsonService
     public async Task<List<SongData>> ConvertJson(FileInfo info)
     {
         string contents = File.ReadAllText(info.FullName);
-        var data = JsonConvert.DeserializeObject<List<SongData>>(contents);
+        var data = await Task.Run(() => JsonConvert.DeserializeObject<List<SongData>>(contents));
         return data;
     }
 
@@ -85,4 +90,49 @@ public sealed class JsonService
         await LoggingService.LogInformationAsync("Json", "Could not find a file with that specified name");
         return "File not found";
     }
+
+    public async Task<IEnumerable<string>> GetAllJsonInFolder()
+    {
+        string files = path + @"LocalJson\";
+        foreach (var item in Directory.EnumerateFiles(files))
+        {
+            await LoggingService.LogInformationAsync("Json", item);
+        }
+        return Directory.EnumerateFiles(files);
+    }
+
+    private async Task<List<string>> GetRules()
+    {
+        string rulesPath = path + @"\Stats\Rules.txt";
+        string[] array = await File.ReadAllLinesAsync(rulesPath);
+        return array.ToList();
+    }
+
+    public async Task NewRule(string p1, string p2, Optional<string> p3, Optional<string> p4)
+    {
+        string rulesPath = path + @"\Stats\Rules.txt";
+        List<string> players = new List<string>
+        {
+            p1,
+            p2
+        };
+        if (p3.GetType() != null)
+        {
+            players.Add((string)p3);
+        }
+        if (p4.GetType() != null)
+        {
+            players.Add((string)p4);
+        }
+        await File.AppendAllLinesAsync(rulesPath, players);
+    }
+
+    public async Task ListRules(ISocketMessageChannel channel)
+    {
+        foreach (string rule in GetRules().Result)
+        {
+            await channel.SendMessageAsync(rule);
+        }
+    }
+
 }
