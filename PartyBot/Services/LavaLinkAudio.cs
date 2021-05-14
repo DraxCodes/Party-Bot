@@ -85,11 +85,6 @@ namespace PartyBot.Services
                     : await _lavaNode.SearchYouTubeAsync(query);
                 }
 
-                //Console.WriteLine(search.ToString());
-                //Console.WriteLine(search.LoadStatus.ToString());
-                //Console.WriteLine(search.Exception.Severity);
-                //Console.WriteLine(search.Exception.Message);
-
                 //If we couldn't find anything, tell the user.
                 if (search.LoadStatus == LoadStatus.NoMatches)
                 {
@@ -100,9 +95,6 @@ namespace PartyBot.Services
                 //TODO: Add a 1-5 list for the user to pick from. (Like Fredboat)
                 track = search.Tracks.FirstOrDefault();
 
-
-                //Console.WriteLine("after first or default track");
-
                 //If the Bot is already playing music, or if it is paused but still has music in the playlist, Add the requested track to the queue.
                 if (player.Track != null && player.PlayerState is PlayerState.Playing || player.PlayerState is PlayerState.Paused)
                 {
@@ -110,13 +102,6 @@ namespace PartyBot.Services
                     await LoggingService.LogInformationAsync("Music", $"{track.Title} has been added to the music queue.");
                     return await EmbedHandler.CreateBasicEmbed("Music", $"{track.Title} has been added to queue.", Color.Blue);
                 }
-
-                /*
-                 * I think that here we can probably do an if(player.Track.)
-                 */
-
-
-                //Console.WriteLine("Right before player");
 
                 //Player was not playing anything, so lets play the requested track.
                 await player.PlayAsync(track);
@@ -373,8 +358,7 @@ namespace PartyBot.Services
             }
 
             if (!args.Player.Queue.TryDequeue(out var queueable))
-            {
-                
+            { 
                 await args.Player.TextChannel.SendMessageAsync("Playback Finished.");
                 return;
             }
@@ -411,7 +395,7 @@ namespace PartyBot.Services
             return localpath;
         }
 
-        public async Task<Embed> queueSongsFromData(SocketGuildUser user, IGuild guild, List<SongData> data)
+        public async Task<Embed> QueueSongsFromData(SocketGuildUser user, IGuild guild, List<SongData> data)
         {
             //Check If User Is Connected To Voice Cahnnel.
             if (user.VoiceChannel == null)
@@ -425,8 +409,9 @@ namespace PartyBot.Services
                 return await EmbedHandler.CreateErrorEmbed("Music, Play", "I'm not connected to a voice channel.");
             }
 
+            //This function is so disgusting and needs to be cleaned up later
+
             var player = _lavaNode.GetPlayer(guild);
-            string MP3Link;
             LavaTrack toQueue;
             bool playFirst = true;
 
@@ -438,9 +423,10 @@ namespace PartyBot.Services
                 try
                 {
                     SongData song = data[0];
-                    toQueue = await DownloadAndConvert(song);
+                    toQueue = await DownloadAndMakeTrack(song);
                     await player.PlayAsync(toQueue);
-                    return await EmbedHandler.CreateBasicEmbed("Music", $"{player.Track.Title} now playing.", Color.Blue);
+                    await player.TextChannel.SendMessageAsync(embed: await EmbedHandler.CreateBasicEmbed(
+                        "Now Playing", $"{player.Track.Title}, the {song.type} from {song.anime.english} now playing.", Color.Blue));
                 }
                 catch (Exception ex)
                 {
@@ -450,7 +436,7 @@ namespace PartyBot.Services
             foreach (SongData song in data.Skip(1))
                 try
                 {
-                    toQueue = await DownloadAndConvert(song);
+                    toQueue = await DownloadAndMakeTrack(song);
                     //If the Bot is already playing music, or if it is paused but still has music in the playlist, Add the requested track to the queue.
                     player.Queue.Enqueue(toQueue);
                     await LoggingService.LogInformationAsync("Music", $"{toQueue.Title} has been added to the music queue.");
@@ -460,7 +446,7 @@ namespace PartyBot.Services
                     Console.WriteLine(ex.Message);
                 }
 
-            return await EmbedHandler.CreateBasicEmbed("Music", "All songs from latest Json have been added to queue.", Color.Blue);
+            return await EmbedHandler.CreateBasicEmbed("Music", "All songs from the specified Json have been added to queue.", Color.Blue);
         }
 
         public LavaTrack CatboxTrack(LavaTrack track, string songName,
@@ -471,7 +457,7 @@ namespace PartyBot.Services
             return toReturn;
         }
 
-        public async Task<LavaTrack> DownloadAndConvert(SongData song)
+        public async Task<LavaTrack> DownloadAndMakeTrack(SongData song)
         {
             string MP3Link = await DownloadMP3(song.urls.catbox._0);
             var search = await _lavaNode.SearchAsync(MP3Link);

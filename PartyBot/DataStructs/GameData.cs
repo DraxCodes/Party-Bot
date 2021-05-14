@@ -1,8 +1,11 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 
+/*
+ * This file is meant to contain all the necessary classes to deserialize
+ * Jsons exported from the AMQ SongListUI user script made by TheJoseph98
+ * can be found here https://github.com/TheJoseph98/AMQ-Scripts/blob/master/README.md
+*/
 public class GameData
 {
 
