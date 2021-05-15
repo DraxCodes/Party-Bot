@@ -28,7 +28,23 @@ namespace PartyBot.Modules
             => await JsonService.ListRules(Context.Channel);
 
         [Command("newrule")]
-        public async Task AddRule(string player, string player2, Optional<string> player3, Optional<string> player4)
+        public async Task AddRule(string player, string player2)
+            => await JsonService.NewRule(player, player2);
+
+        [Command("newrule")]
+        public async Task AddRule(string player, string player2, string player3)
+            => await JsonService.NewRule(player, player2, player3);
+
+        [Command("newrule")]
+        public async Task AddRule(string player, string player2, string player3, string player4)
             => await JsonService.NewRule(player, player2, player3, player4);
+
+        [Command("deleterule")]
+        public async Task DeleteRule(string rule)
+            => await JsonService.DeleteRule(Context.Channel, rule);
+
+        [Command("listjsons")]
+        public async Task PrintJsons()
+            => await JsonService.ListJsons(Context.Channel);
     }
 }
