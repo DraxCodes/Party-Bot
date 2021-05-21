@@ -11,7 +11,7 @@ namespace PartyBot.Modules
     {
         /* Get our AudioService from DI */
         public LavaLinkAudio AudioService { get; set; }
-        public JsonService JsonService { get; set; }
+        public DataService DataService { get; set; }
 
         /* All the below commands are ran via Lambda Expressions to keep this file as neat and closed off as possible. 
               We pass the AudioService Task into the section that would normally require an Embed as that's what all the
@@ -56,10 +56,10 @@ namespace PartyBot.Modules
         [Command("Playlist")]
         public async Task CreatePlaylist()
             => await ReplyAsync(embed: await AudioService.QueueSongsFromData(Context.User as SocketGuildUser, 
-                Context.Guild, await JsonService.ConvertJson(JsonService.GetLastJson())));
+                Context.Guild, await DataService.ConvertJson(DataService.GetLastJson())));
         [Command("Playlist")]
         public async Task CreatePlaylist(string file)
             => await ReplyAsync(embed: await AudioService.QueueSongsFromData(Context.User as SocketGuildUser, 
-                Context.Guild, await JsonService.ConvertJson(await JsonService.GetJson(file))));
+                Context.Guild, await DataService.ConvertJson(await DataService.GetJson(file))));
     }
 }

@@ -10,41 +10,41 @@ using System.Threading.Tasks;
 
 namespace PartyBot.Modules
 {
-    public class JsonModule : ModuleBase<SocketCommandContext>
+    public class DataModule : ModuleBase<SocketCommandContext>
     {
 
-        public JsonService JsonService { get; set; }
+        public DataService DataService { get; set; }
 
         [Command("savejson")]
         public async Task GetFiles(int i)
-            => await JsonService.GetJsonFiles(Context.Channel, i);
+            => await DataService.GetJsonFiles(Context.Channel, i);
 
         [Command("updatestats")]
         public async Task UpdateStats()
-            => await JsonService.GetAllJsonInFolder();
+            => await DataService.GetAllJsonInFolder();
 
         [Command("listrules")]
         public async Task ListRules()
-            => await JsonService.ListRules(Context.Channel);
+            => await DataService.ListRules(Context.Channel);
 
         [Command("newrule")]
         public async Task AddRule(string player, string player2)
-            => await JsonService.NewRule(player, player2);
+            => await DataService.NewRule(player, player2);
 
         [Command("newrule")]
         public async Task AddRule(string player, string player2, string player3)
-            => await JsonService.NewRule(player, player2, player3);
+            => await DataService.NewRule(player, player2, player3);
 
         [Command("newrule")]
         public async Task AddRule(string player, string player2, string player3, string player4)
-            => await JsonService.NewRule(player, player2, player3, player4);
+            => await DataService.NewRule(player, player2, player3, player4);
 
         [Command("deleterule")]
         public async Task DeleteRule(string rule)
-            => await JsonService.DeleteRule(Context.Channel, rule);
+            => await DataService.DeleteRule(Context.Channel, rule);
 
         [Command("listjsons")]
         public async Task PrintJsons()
-            => await JsonService.ListJsons(Context.Channel);
+            => await DataService.ListJsons(Context.Channel);
     }
 }

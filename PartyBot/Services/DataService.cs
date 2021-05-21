@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using PartyBot.Services;
 
-public sealed class JsonService
+public sealed class DataService
 {
     readonly string JsonFiles = Directory.GetCurrentDirectory().Substring(0,
         Directory.GetCurrentDirectory().LastIndexOf(@"bin\")) + @"\LocalJson";

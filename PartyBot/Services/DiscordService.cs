@@ -8,6 +8,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Victoria;
+using csharpi.Database;
 
 
 namespace PartyBot.Services
@@ -19,7 +20,7 @@ namespace PartyBot.Services
         private readonly ServiceProvider _services;
         private readonly LavaNode _lavaNode;
         private readonly LavaLinkAudio _audioService;
-        private readonly JsonService _jsonService;
+        private readonly DataService _dataService;
         private readonly GlobalData _globalData;
 
         public DiscordService()
@@ -29,7 +30,7 @@ namespace PartyBot.Services
             _commandHandler = _services.GetRequiredService<CommandHandler>();
             _lavaNode = _services.GetRequiredService<LavaNode>();
             _globalData = _services.GetRequiredService<GlobalData>();
-            _jsonService = _services.GetRequiredService<JsonService>();
+            _dataService = _services.GetRequiredService<DataService>();
             _audioService = _services.GetRequiredService<LavaLinkAudio>();
 
             SubscribeLavaLinkEvents();
@@ -39,17 +40,16 @@ namespace PartyBot.Services
         /* Initialize the Discord Client. */
         public async Task InitializeAsync()
         {
-            string jarPath = Directory.GetCurrentDirectory().Substring(0, Directory.GetCurrentDirectory().LastIndexOf(@"bin\"));
-            Console.WriteLine(jarPath);
+            //string jarPath = Directory.GetCurrentDirectory().Substring(0, Directory.GetCurrentDirectory().LastIndexOf(@"bin\"));
+            //Console.WriteLine(jarPath);
             
-            Process clientProcess = new Process();
-            clientProcess.StartInfo.FileName = "java";
-            clientProcess.StartInfo.Arguments = @"-jar " + jarPath + "Lavalink.jar";
-            clientProcess.Start();
-            clientProcess.WaitForExit();
-            int code = clientProcess.ExitCode;
+            //Process clientProcess = new Process();
+            //clientProcess.StartInfo.FileName = "java";
+            //clientProcess.StartInfo.Arguments = @"-jar " + jarPath + "Lavalink.jar";
+            //clientProcess.Start();
+            //clientProcess.WaitForExit();
+            //int code = clientProcess.ExitCode;
             
-
             await InitializeGlobalDataAsync();
 
             await _client.LoginAsync(TokenType.Bot, GlobalData.Config.DiscordToken);
@@ -110,9 +110,10 @@ namespace PartyBot.Services
                 .AddSingleton<LavaNode>()
                 .AddSingleton(new LavaConfig())
                 .AddSingleton<LavaLinkAudio>()
-                .AddSingleton<JsonService>()
+                .AddSingleton<DataService>()
                 .AddSingleton<BotService>()
                 .AddSingleton<GlobalData>()
+                .AddDbContext<CsharpiEntities>()
                 .BuildServiceProvider();
         }
     }
